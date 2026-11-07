@@ -54,14 +54,14 @@ function Index() {
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
           <div className="mt-14 grid gap-10 md:grid-cols-2">
             {[
-              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, with curriculum supplied by Logiscool." },
-              { img: finance, to: "/financial-literacy" as const, tag: "Under development", title: "Financial Literacy for Life", text: "An age-appropriate concept introducing budgeting, saving, investing and responsible decision-making as an essential life skill for every student." },
+              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers." },
+              { img: finance, to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
             ].map((p) => (
               <article key={p.to} className="group">
                 <div className="overflow-hidden">
                   <img src={p.img} alt="" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                 </div>
-                <span className={p.tag === "Under development" ? "status-tag mt-6" : "eyebrow mt-6 inline-block"}>{p.tag}</span>
+                <span className="eyebrow mt-6 inline-block">{p.tag}</span>
                 <h3 className="mt-4 text-2xl md:text-3xl">{p.title}</h3>
                 <p className="mt-3 text-muted-foreground">{p.text}</p>
                 <Link to={p.to} className="mt-5 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">

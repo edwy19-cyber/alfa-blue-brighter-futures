@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import coding from "@/assets/coding-students.jpg";
+import eaf from "@/assets/eaf-certified-badge.png.asset.json";
 import { CtaBand, NumberedList, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -7,7 +8,7 @@ export const Route = createFileRoute("/ai-coding-literacy")({
   head: () =>
     pageHead(
       "AI, Computer Coding & Digital Literacy",
-      "How ALFA BLUE facilitates partnerships that bring AI, coding and digital literacy education to school-age students, with curriculum supplied by Logiscool.",
+      "How ALFA BLUE facilitates partnerships that bring AI, coding and digital literacy education to school-age students, working with international curriculum providers.",
     ),
   component: Page,
 });
@@ -22,7 +23,7 @@ const skills = [
 ];
 
 const roles = [
-  { who: "Logiscool (curriculum provider)", text: "Supplies the specialist coding, AI and digital literacy curriculum and learning platform, subject to applicable partnership and licensing arrangements. ALFA BLUE does not own the curriculum or operate the platform." },
+  { who: "International curriculum providers", text: "Supply the specialist coding, AI and digital literacy curriculum and learning platform, subject to applicable partnership and licensing arrangements. ALFA BLUE does not own the curriculum or operate the platform." },
   { who: "ALFA BLUE (programme developer)", text: "Strategic partnerships, programme development, institutional coordination, market access and facilitation of delivery." },
   { who: "Authorised delivery partners", text: "NGOs, schools and foundations who implement programmes with trained educators, in line with the provider's requirements." },
 ];
@@ -50,7 +51,12 @@ function Page() {
                 </li>
               ))}
             </ul>
-            <p className="placeholder-note mt-10">[Placeholder] Confirm current status of the Logiscool partnership and licensing terms before publication. Logiscool logos will only be shown with written permission.</p>
+            <div className="mt-10 flex flex-col gap-6 border border-border bg-card p-6 sm:flex-row sm:items-center">
+              <img src={eaf.url} alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={1984} height={2048} className="h-auto w-28 shrink-0" />
+              <p className="text-sm text-muted-foreground">
+                ALFA BLUE works with international curriculum providers to expand access to high-quality AI, coding and digital literacy education. Selected learning solutions used by our curriculum partners have been independently evaluated and certified for pedagogical quality by Education Alliance Finland (EAF).
+              </p>
+            </div>
           </div>
         </div>
       </section>

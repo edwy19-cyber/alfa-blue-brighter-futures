@@ -10,6 +10,9 @@ export const NAV = [
 
 export const SITE_URL = "https://alfablueme.com";
 
+export const LEGAL_NAME = "ALFA BLUE Management Consulting LLC";
+export const REGISTERED_ADDRESS = ["16192 Coastal Highway", "Lewes, Delaware 19958", "County of Sussex, USA"] as const;
+
 export function pageHead(title: string, description: string) {
   const full = `${title} | ALFA BLUE`;
   return {

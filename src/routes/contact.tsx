@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { PageHero } from "@/components/site/Blocks";
-import { pageHead } from "@/content/site";
+import { LEGAL_NAME, pageHead, REGISTERED_ADDRESS } from "@/content/site";
 import { ENQUIRY_TYPES, enquirySchema } from "@/lib/enquiry";
 import { submitEnquiry } from "@/lib/enquiry.functions";
 
@@ -82,6 +82,13 @@ function Page() {
                   <span className={`mt-1 block text-sm ${type === t ? "text-primary-foreground/75" : "text-muted-foreground"}`}>{descriptions[t]}</span>
                 </button>
               ))}
+            </div>
+            <div className="mt-10 border-t border-border pt-6 text-sm">
+              <p className="eyebrow">Registered address</p>
+              <p className="mt-3 font-semibold">{LEGAL_NAME}</p>
+              <address className="not-italic text-muted-foreground">
+                {REGISTERED_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
+              </address>
             </div>
           </fieldset>
 

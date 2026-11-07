@@ -11,11 +11,14 @@ export const Route = createFileRoute("/about")({
   component: Page,
 });
 
-// Replace with verified biographies once publication consent is received.
+// Add further experts only once agreements and publication consent are secured.
 const people = [
-  { name: "[Name]", role: "Founder & Managing Director", bio: "[Biography to be provided and verified]" },
-  { name: "[Name]", role: "Education Expert", bio: "[Biography to be provided — publication consent required]" },
-  { name: "[Name]", role: "Finance Expert", bio: "[Biography to be provided — publication consent required]" },
+  {
+    name: "Ahmed Edwy",
+    role: "Founder and Managing Partner",
+    bio: "Ahmed Edwy is a senior executive and entrepreneur with over 25 years of experience spanning corporate banking, financial services and strategic business development. As Founder and Managing Partner of ALFA BLUE, he applies his financial background and entrepreneurial perspective to expanding international partnerships in digital education and practical financial literacy for young people.",
+    linkedin: "https://www.linkedin.com/in/ahmed-edwy-76695529/",
+  },
 ];
 
 function Page() {
@@ -34,15 +37,19 @@ function Page() {
       </section>
       <section className="section bg-secondary">
         <div className="container-x">
-          <SectionHead eyebrow="Leadership & experts" title="The people behind our work" />
+          <SectionHead eyebrow="Leadership" title="The People Behind Our Work" />
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {people.map((p, i) => (
-              <div key={i} className="bg-card p-8">
-                <div className="flex h-20 w-20 items-center justify-center bg-brand-soft font-display text-2xl text-primary" aria-hidden>{p.name.slice(1, 2)}</div>
+            {people.map((p) => (
+              <article key={p.name} className="bg-card p-8">
+                {/* Replace with Ahmed Edwy's approved portrait once supplied. */}
+                <div className="flex h-24 w-24 items-center justify-center bg-brand-soft font-display text-3xl text-primary" aria-hidden>AE</div>
                 <h3 className="mt-6 text-xl">{p.name}</h3>
                 <p className="eyebrow mt-1">{p.role}</p>
                 <p className="mt-4 text-sm text-muted-foreground">{p.bio}</p>
-              </div>
+                <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block font-semibold text-primary underline-offset-4 hover:underline">
+                  View LinkedIn profile
+                </a>
+              </article>
             ))}
           </div>
         </div>
