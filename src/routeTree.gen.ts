@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AiCodingLiteracyRouteImport } from './routes/ai-coding-literacy'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
+import { Route as PartnershipsRouteImport } from './routes/partnerships'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiCodingLiteracyRoute = AiCodingLiteracyRouteImport.update({
+  id: '/ai-coding-literacy',
+  path: '/ai-coding-literacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinancialLiteracyRoute = FinancialLiteracyRouteImport.update({
+  id: '/financial-literacy',
+  path: '/financial-literacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnershipsRoute = PartnershipsRouteImport.update({
+  id: '/partnerships',
+  path: '/partnerships',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/contact': typeof ContactRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
+  '/partnerships': typeof PartnershipsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/contact': typeof ContactRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
+  '/partnerships': typeof PartnershipsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/contact': typeof ContactRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
+  '/partnerships': typeof PartnershipsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/ai-coding-literacy'
+    | '/contact'
+    | '/financial-literacy'
+    | '/partnerships'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/ai-coding-literacy'
+    | '/contact'
+    | '/financial-literacy'
+    | '/partnerships'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/ai-coding-literacy'
+    | '/contact'
+    | '/financial-literacy'
+    | '/partnerships'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AiCodingLiteracyRoute: typeof AiCodingLiteracyRoute
+  ContactRoute: typeof ContactRoute
+  FinancialLiteracyRoute: typeof FinancialLiteracyRoute
+  PartnershipsRoute: typeof PartnershipsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-coding-literacy': {
+      id: '/ai-coding-literacy'
+      path: '/ai-coding-literacy'
+      fullPath: '/ai-coding-literacy'
+      preLoaderRoute: typeof AiCodingLiteracyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financial-literacy': {
+      id: '/financial-literacy'
+      path: '/financial-literacy'
+      fullPath: '/financial-literacy'
+      preLoaderRoute: typeof FinancialLiteracyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnerships': {
+      id: '/partnerships'
+      path: '/partnerships'
+      fullPath: '/partnerships'
+      preLoaderRoute: typeof PartnershipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AiCodingLiteracyRoute: AiCodingLiteracyRoute,
+  ContactRoute: ContactRoute,
+  FinancialLiteracyRoute: FinancialLiteracyRoute,
+  PartnershipsRoute: PartnershipsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

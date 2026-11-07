@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Site copy and nav live in `src/content/site.ts` (with `pageHead()` per route) so future Arabic/French versions can mirror one structure.
+- Enquiry validation lives in `src/lib/enquiry.ts` (shared by client and server function); delivery is not yet wired to email/storage.
