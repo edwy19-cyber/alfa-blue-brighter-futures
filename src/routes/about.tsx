@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import portraitAsset from "@/assets/ahmed-edwy-portrait.jpg.asset.json";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -18,6 +19,7 @@ const people = [
     role: "Founder and Managing Partner",
     bio: "Ahmed Edwy is a senior executive and entrepreneur with over 25 years of experience spanning corporate banking, financial services and strategic business development. As Founder and Managing Partner of ALFA BLUE, he applies his financial background and entrepreneurial perspective to expanding international partnerships in digital education and practical financial literacy for young people.",
     linkedin: "https://www.linkedin.com/in/ahmed-edwy-76695529/",
+    photo: portraitAsset.url,
   },
 ];
 
@@ -38,17 +40,18 @@ function Page() {
       <section className="section bg-secondary">
         <div className="container-x">
           <SectionHead eyebrow="Leadership" title="The People Behind Our Work" />
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
             {people.map((p) => (
-              <article key={p.name} className="bg-card p-8">
-                {/* Replace with Ahmed Edwy's approved portrait once supplied. */}
-                <div className="flex h-24 w-24 items-center justify-center bg-brand-soft font-display text-3xl text-primary" aria-hidden>AE</div>
-                <h3 className="mt-6 text-xl">{p.name}</h3>
-                <p className="eyebrow mt-1">{p.role}</p>
-                <p className="mt-4 text-sm text-muted-foreground">{p.bio}</p>
-                <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block font-semibold text-primary underline-offset-4 hover:underline">
-                  View LinkedIn profile
-                </a>
+              <article key={p.name} className="flex flex-col gap-6 bg-card p-8 sm:flex-row sm:gap-8">
+                <img src={p.photo} alt={`Portrait of ${p.name}`} width={236} height={236} className="h-40 w-40 shrink-0 border border-border object-cover sm:h-48 sm:w-48" />
+                <div>
+                  <h3 className="text-xl">{p.name}</h3>
+                  <p className="eyebrow mt-1">{p.role}</p>
+                  <p className="mt-4 text-sm text-muted-foreground">{p.bio}</p>
+                  <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block font-semibold text-primary underline-offset-4 hover:underline">
+                    View LinkedIn profile
+                  </a>
+                </div>
               </article>
             ))}
           </div>
