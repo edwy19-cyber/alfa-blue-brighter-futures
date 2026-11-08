@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { CtaBand, NumberedList, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -12,10 +13,30 @@ export const Route = createFileRoute("/partnerships")({
 });
 
 const partners = [
-  { title: "NGOs", text: "Community reach and local trust, combined with structured, licensed curricula." },
-  { title: "Foundations & development organisations", text: "Programmes designed with clear objectives and evaluation from the outset." },
-  { title: "CSR & ESG teams", text: "Credible education initiatives aligned with corporate social commitments." },
-  { title: "Schools & education authorities", text: "Practical options for integrating digital and financial skills into learning." },
+  {
+    title: "NGOs",
+    profile: "Community and youth organisations, local and international, with trusted relationships in the communities they serve and a mission to widen access to quality education.",
+    offer: "A certified curriculum, educator training and programme coordination, so their reach becomes structured, measurable learning.",
+    enquiry: "NGO partnership",
+  },
+  {
+    title: "Foundations & development organisations",
+    profile: "Philanthropic foundations, development agencies and multilateral programmes focused on education, digital inclusion, youth employability or gender equity.",
+    offer: "Programmes designed with clear objectives, indicators and independent evaluation from the outset, with transparent reporting.",
+    enquiry: "Funding & sponsorship",
+  },
+  {
+    title: "CSR & ESG teams",
+    profile: "Companies whose social-impact, ESG or community-investment strategy includes education, digital skills or financial literacy, often in the markets where they operate.",
+    offer: "Credible, certified initiatives aligned with corporate commitments and the UN Sustainable Development Goals (SDG 4, Quality Education), with impact reports to stakeholders.",
+    enquiry: "Funding & sponsorship",
+  },
+  {
+    title: "Schools & education authorities",
+    profile: "Public and private schools, school networks and ministries or regional authorities seeking to introduce or strengthen digital and financial literacy.",
+    offer: "Practical integration options (in-timetable, after-school or blended), teacher training and age-appropriate learning pathways.",
+    enquiry: "Schools",
+  },
 ];
 
 const pathway = [
@@ -34,13 +55,18 @@ function Page() {
       <section className="section">
         <div className="container-x">
           <SectionHead eyebrow="Who we work with" title="Partners we seek" />
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
             {partners.map((p) => (
-              <div key={p.title} className="border-t-2 border-brand pt-6">
+              <div key={p.title} className="flex flex-col border-t-2 border-brand pt-6">
                 <h3 className="text-xl">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.text}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{p.profile}</p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">What we offer together</p>
+                <p className="mt-1 text-sm text-muted-foreground">{p.offer}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <Button asChild size="lg"><Link to="/contact">Contact us</Link></Button>
           </div>
         </div>
       </section>
@@ -48,12 +74,15 @@ function Page() {
         <div className="container-x">
           <SectionHead eyebrow="Proposed pathway" title="From needs assessment to evaluated impact" />
           <div className="mt-14"><NumberedList items={pathway} /></div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container-x">
-          <SectionHead eyebrow="Case studies" title="Future programme results" />
-          <p className="placeholder-note mt-8 max-w-2xl">[Placeholder] Case studies and impact data will appear here after programmes have been delivered and evaluated.</p>
+          <div className="mt-12 border border-border bg-card p-8 md:p-10">
+            <h3 className="text-2xl">In cooperation with an AI learning-analytics partner</h3>
+            <p className="mt-4 text-muted-foreground">
+              Needs assessment and impact evaluation are supported by a K-12 education-technology partner based in Asia, whose patent-pending AI engine runs adaptive diagnostic assessments to identify each student's individual learning gaps and recommend personalised remediation. Its platform gives teachers, school leaders and parents clear, data-driven insight into progress, and is used by leading private schools.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              This allows us to establish a reliable baseline before a programme starts and to measure learning gains against agreed indicators at the end.
+            </p>
+          </div>
         </div>
       </section>
       <CtaBand />

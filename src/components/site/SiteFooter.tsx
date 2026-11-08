@@ -38,7 +38,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row md:justify-between">
           <p>© {new Date().getFullYear()} {LEGAL_NAME}. All rights reserved.</p>
-          <p>[Legal notice &amp; privacy policy — to be provided]</p>
+          <Link to="/privacy" className="underline-offset-4 hover:text-primary-foreground hover:underline">Privacy Statement</Link>
         </div>
       </div>
     </footer>

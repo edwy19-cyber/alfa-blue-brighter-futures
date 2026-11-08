@@ -15,6 +15,7 @@ import { Route as AiCodingLiteracyRouteImport } from './routes/ai-coding-literac
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const PartnershipsRoute = PartnershipsRouteImport.update({
   path: '/partnerships',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/partnerships': typeof PartnershipsRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/partnerships': typeof PartnershipsRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/partnerships': typeof PartnershipsRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/financial-literacy'
     | '/partnerships'
+    | '/privacy'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/financial-literacy'
     | '/partnerships'
+    | '/privacy'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/financial-literacy'
     | '/partnerships'
+    | '/privacy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FinancialLiteracyRoute: typeof FinancialLiteracyRoute
   PartnershipsRoute: typeof PartnershipsRoute
+  PrivacyRoute: typeof PrivacyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnershipsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FinancialLiteracyRoute: FinancialLiteracyRoute,
   PartnershipsRoute: PartnershipsRoute,
+  PrivacyRoute: PrivacyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

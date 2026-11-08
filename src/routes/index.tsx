@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-classroom.jpg";
 import coding from "@/assets/coding-students.jpg";
 import finance from "@/assets/financial-classroom.jpg";
+import logoT2 from "@/assets/alfa-blue-logo-t2.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -44,7 +45,7 @@ function Index() {
           </div>
           <div className="relative">
             <img src={hero} alt="Students working on laptops with their teacher in a classroom" width={1600} height={1008} className="aspect-[4/3] w-full object-cover" />
-            <div className="absolute -bottom-5 -left-5 hidden h-24 w-24 bg-brand md:block" aria-hidden />
+            <img src={logoT2.url} alt="ALFA BLUE" aria-hidden tabIndex={-1} className="absolute -bottom-5 -left-5 hidden h-24 w-24 md:block" />
           </div>
         </div>
       </section>
@@ -54,7 +55,7 @@ function Index() {
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
           <div className="mt-14 grid gap-10 md:grid-cols-2">
             {[
-              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers." },
+              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool — an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
               { img: finance, to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
             ].map((p) => (
               <article key={p.to} className="group">
@@ -64,6 +65,7 @@ function Index() {
                 <span className="eyebrow mt-6 inline-block">{p.tag}</span>
                 <h3 className="mt-4 text-2xl md:text-3xl">{p.title}</h3>
                 <p className="mt-3 text-muted-foreground">{p.text}</p>
+                {"note" in p && p.note && <p className="mt-3 border-l-2 border-brand pl-4 text-sm text-muted-foreground">{p.note}</p>}
                 <Link to={p.to} className="mt-5 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
                   Learn more <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -84,15 +86,6 @@ function Index() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container-x">
-          <SectionHead eyebrow="Results & case studies" title="Programme outcomes will be published here" />
-          <p className="placeholder-note mt-8 max-w-2xl">
-            [Placeholder] This space is reserved for verified programme results and case studies once available. No figures are shown until they have been independently measured.
-          </p>
         </div>
       </section>
 

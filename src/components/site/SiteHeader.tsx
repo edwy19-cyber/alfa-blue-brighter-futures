@@ -9,9 +9,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <div className="container-x flex h-20 items-center justify-between gap-6">
+      <div className="container-x flex h-28 items-center justify-between gap-6 md:h-32">
         <Link to="/" aria-label="ALFA BLUE home" className="shrink-0">
-          <img src={logo.url} alt="ALFA BLUE" className="h-auto max-h-14 w-auto max-w-[48px] md:max-h-16 md:max-w-[52px]" width={723} height={890} />
+          <img src={logo.url} alt="ALFA BLUE" className="h-auto max-h-[98px] w-auto max-w-[84px] md:max-h-28 md:max-w-[91px]" width={723} height={890} />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {NAV.slice(1, 5).map((n) => (

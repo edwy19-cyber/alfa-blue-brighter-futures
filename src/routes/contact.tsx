@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link, useSearch } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,10 @@ const descriptions: Record<(typeof ENQUIRY_TYPES)[number], string> = {
 };
 
 function Page() {
-  const [type, setType] = useState<(typeof ENQUIRY_TYPES)[number]>("NGO partnership");
+  const { type: initialType } = useSearch({ strict: false }) as { type?: string };
+  const [type, setType] = useState<(typeof ENQUIRY_TYPES)[number]>(
+    (ENQUIRY_TYPES as readonly string[]).includes(initialType ?? "") ? (initialType as (typeof ENQUIRY_TYPES)[number]) : "NGO partnership",
+  );
   const [startedAt] = useState(() => Date.now());
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -113,7 +116,8 @@ function Page() {
               <label className="flex items-start gap-3 text-sm"><input type="checkbox" name="adultConfirm" className="mt-1 accent-primary" /> I confirm I am 18 or over and contacting on behalf of an organisation. *</label>
               <label className="flex items-start gap-3 text-sm"><input type="checkbox" name="privacyConsent" className="mt-1 accent-primary" /> I agree that ALFA BLUE may use these details solely to respond to this enquiry. *</label>
               <p className="text-xs text-muted-foreground">
-                Privacy notice: we collect only the details above to reply to your enquiry. We do not collect student data and do not share your information with third parties for marketing. [Full privacy policy — to be provided]
+                Privacy notice: we collect only the details above to reply to your enquiry. We do not collect student data and do not share your information with third parties for marketing. See our{" "}
+                <Link to="/privacy" className="font-medium text-primary underline-offset-4 hover:underline">Privacy Statement</Link> for full details.
               </p>
               <Button type="submit" size="lg" disabled={sending}>{sending ? "Sending…" : "Send enquiry"}</Button>
             </form>

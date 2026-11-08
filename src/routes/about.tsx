@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Linkedin } from "lucide-react";
 import portraitAsset from "@/assets/ahmed-edwy-portrait.jpg.asset.json";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -7,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () =>
     pageHead(
       "About & Expertise",
-      "ALFA BLUE's strategic advisory and partnership-development role, its leadership and its collaboration with education and finance professionals.",
+      "ALFA BLUE's strategic advisory and partnership-development role, its leadership and its work connecting curriculum providers, delivery organisations and funders.",
     ),
   component: Page,
 });
@@ -33,7 +34,6 @@ function Page() {
           <div className="space-y-5 text-muted-foreground">
             <p>We advise on and develop education programmes, coordinate between curriculum providers and delivery organisations, and help open access to new markets and communities.</p>
             <p>We are not a registered NGO or charitable foundation. Our commercial model allows us to work flexibly with non-profit, public and private partners alike.</p>
-            <p>Our work draws on collaboration with international education and finance professionals, who contribute subject-matter expertise to programme design.</p>
           </div>
         </div>
       </section>
@@ -48,8 +48,8 @@ function Page() {
                   <h3 className="text-xl">{p.name}</h3>
                   <p className="eyebrow mt-1">{p.role}</p>
                   <p className="mt-4 text-sm text-muted-foreground">{p.bio}</p>
-                  <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block font-semibold text-primary underline-offset-4 hover:underline">
-                    View LinkedIn profile
+                  <a href={p.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${p.name} on LinkedIn`} className="mt-5 inline-block text-[#0A66C2] transition-opacity hover:opacity-80">
+                    <Linkedin className="h-7 w-7" fill="currentColor" strokeWidth={0} />
                   </a>
                 </div>
               </article>
@@ -57,7 +57,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <CtaBand title="Collaborate as an expert" text="Education and finance professionals interested in contributing are warmly invited to get in touch." />
+      <CtaBand />
     </>
   );
 }
