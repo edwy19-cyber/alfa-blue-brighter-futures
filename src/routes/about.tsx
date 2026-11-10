@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Linkedin } from "lucide-react";
 import portraitAsset from "@/assets/ahmed-edwy-portrait.jpg.asset.json";
+import boardroomAsset from "@/assets/about-boardroom.png.asset.json";
+import linkedinIcon from "@/assets/linkedin-icon.png.asset.json";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -29,12 +30,15 @@ function Page() {
     <>
       <PageHero eyebrow="About ALFA BLUE" title="Strategic advice and partnership development for education" intro="ALFA BLUE Management Consulting is a commercially operated company. We combine consulting experience with a commitment to inclusive education and measurable social impact." />
       <section className="section">
-        <div className="container-x grid gap-14 lg:grid-cols-2">
-          <SectionHead eyebrow="Our role" title="Connecting the people who make programmes work" />
-          <div className="space-y-5 text-muted-foreground">
-            <p>We advise on and develop education programmes, coordinate between curriculum providers and delivery organisations, and help open access to new markets and communities.</p>
-            <p>We are not a registered NGO or charitable foundation. Our commercial model allows us to work flexibly with non-profit, public and private partners alike.</p>
+        <div className="container-x grid items-center gap-14 lg:grid-cols-2">
+          <div>
+            <SectionHead eyebrow="Our role" title="Connecting the people who make programmes work" />
+            <div className="mt-6 space-y-5 text-muted-foreground">
+              <p>We advise on and develop education programmes, coordinate between curriculum providers and delivery organisations, and help open access to new markets and communities.</p>
+              <p>We are not a registered NGO or charitable foundation. Our commercial model allows us to work flexibly with non-profit, public and private partners alike.</p>
+            </div>
           </div>
+          <img src={boardroomAsset.url} alt="ALFA BLUE meeting room overlooking the city" width={1291} height={924} className="aspect-[4/3] w-full object-cover" />
         </div>
       </section>
       <section className="section bg-secondary">
@@ -48,8 +52,8 @@ function Page() {
                   <h3 className="text-xl">{p.name}</h3>
                   <p className="eyebrow mt-1">{p.role}</p>
                   <p className="mt-4 text-sm text-muted-foreground">{p.bio}</p>
-                  <a href={p.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${p.name} on LinkedIn`} className="mt-5 inline-block text-[#0A66C2] transition-opacity hover:opacity-80">
-                    <Linkedin className="h-7 w-7" fill="currentColor" strokeWidth={0} />
+                  <a href={p.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${p.name} on LinkedIn`} className="mt-5 inline-block transition-opacity hover:opacity-80">
+                    <img src={linkedinIcon.url} alt="" width={28} height={28} className="h-7 w-7 rounded-full" />
                   </a>
                 </div>
               </article>
