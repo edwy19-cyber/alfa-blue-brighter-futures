@@ -14,4 +14,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("matches the safeguarding policy page linked from the corporate information card", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/safeguarding");
+
+    expect(matches.at(-1)?.routeId).toBe("/safeguarding");
+  });
 });

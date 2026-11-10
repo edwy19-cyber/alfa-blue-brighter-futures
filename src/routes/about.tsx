@@ -85,7 +85,7 @@ function Page() {
               <div className="mt-4 space-y-3 text-sm text-muted-foreground">
                 <p>ALFA BLUE Management Consulting LLC – registered in the State of Delaware, USA, 16192 Coastal Highway, Lewes, Delaware 19958.</p>
                 <p>A commercially operated programme development and partnership company. ALFA BLUE does not solicit, receive or manage donations.</p>
-                <p>Committed to ethical business, anti-corruption, data protection and safeguarding – see our <Link to="/privacy" className="text-primary underline underline-offset-4">Privacy Statement</Link> and <a href="/safeguarding" className="text-primary underline underline-offset-4">Safeguarding Policy</a>.</p>
+                <p>Committed to ethical business, anti-corruption, data protection and safeguarding – see our <Link to="/privacy" className="text-primary underline underline-offset-4">Privacy Statement</Link> and <Link to="/safeguarding" className="text-primary underline underline-offset-4">Safeguarding Policy</Link>.</p>
               </div>
             </article>
           </div>
