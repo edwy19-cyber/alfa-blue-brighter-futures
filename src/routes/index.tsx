@@ -9,11 +9,26 @@ import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
 export const Route = createFileRoute("/")({
-  head: () =>
-    pageHead(
+  head: () => {
+    const head = pageHead(
       "Empowering the Next Generation Through Digital and Financial Literacy",
       "ALFA BLUE builds education partnerships that widen access to AI, coding, digital and financial literacy for school-age students.",
-    ),
+    );
+    const socialTitle = "ALFA BLUE | Digital & Financial Literacy for the Next Generation";
+    const socialDescription = "Partnering with NGOs, schools and sponsors to bring AI, coding and financial literacy to K-12 students in underserved communities.";
+    const overrides: Record<string, string> = {
+      "og:title": socialTitle,
+      "twitter:title": socialTitle,
+      "og:description": socialDescription,
+      "twitter:description": socialDescription,
+    };
+    return {
+      meta: head.meta.map((m) => {
+        const key = ("property" in m ? m.property : "name" in m ? m.name : undefined) as string | undefined;
+        return key && key in overrides ? { ...m, content: overrides[key] } : m;
+      }),
+    };
+  },
   component: Index,
 });
 

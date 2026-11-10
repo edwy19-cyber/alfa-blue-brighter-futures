@@ -127,6 +127,11 @@ function Page() {
               </ul>
             </div>
           </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            <img src="/images/k12-coding-classroom-1.jpg" alt="Primary school pupils coding a game together on laptops" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
+            <img src="/images/k12-coding-classroom-2.jpg" alt="Middle school students building and programming a small robot together" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
+            <img src="/images/k12-coding-classroom-3.jpg" alt="Teenagers comparing block code and Python on a laptop" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
+          </div>
         </div>
       </section>
 
@@ -138,6 +143,11 @@ function Page() {
             <ul className="mt-10 space-y-8">
               {roles.map((r) => (
                 <li key={r.who} className="border-l-2 border-brand pl-6">
+                  {"link" in r && r.link && (
+                  <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                    <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[180px]" />
+                  </a>
+                  )}
                   <h3 className="text-xl">{r.who}</h3>
                   <p className="mt-2 text-muted-foreground">{r.text}</p>
                   {"link" in r && r.link && (
@@ -152,6 +162,9 @@ function Page() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
                 <img src={eaf.url} alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={1984} height={2048} className="h-auto w-28 shrink-0" />
                 <div>
+                  <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                    <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[180px]" />
+                  </a>
                   <h3 className="text-xl">In partnership with Logiscool</h3>
                   <p className="mt-3 text-sm text-muted-foreground">
                     ALFA BLUE works in partnership with{" "}
