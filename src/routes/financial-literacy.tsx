@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import finance from "@/assets/financial-classroom.jpg";
+import literacyStudents from "@/assets/financial-literacy-students.jpg";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -99,6 +100,64 @@ const stages = [
   },
 ];
 
+const inclusionStats = [
+  {
+    figure: "79%",
+    text: "of adults worldwide had an account in 2024, up from 51% in 2011.",
+  },
+  {
+    figure: "1.3 billion",
+    text: "adults still have no account; half of them live in just eight economies, including Egypt, India, Nigeria and Pakistan.",
+  },
+  {
+    figure: "40%",
+    text: "of adults in low- and middle-income countries saved formally in 2024, the fastest rise in a decade.",
+  },
+  {
+    figure: "900 million",
+    text: "adults without an account already own a mobile phone, a ready channel for digital financial services.",
+  },
+];
+
+const inclusionTable = [
+  { indicator: "Adults with an account, worldwide", earlier: "51% (2011)", now: "79%" },
+  { indicator: "Adults with an account, low- and middle-income countries", earlier: "42% (2011)", now: "75%" },
+  { indicator: "Women with an account, low- and middle-income countries", earlier: "37% (2011)", now: "73%" },
+  { indicator: "Adults who saved formally, low- and middle-income countries", earlier: "24% (2021)", now: "40%" },
+  { indicator: "Adults without an account, worldwide", earlier: "–", now: "1.3 billion" },
+];
+
+const literacyFirst = [
+  {
+    text: "Access without understanding leaves people exposed. Research across more than 140 economies found that only around half of adults in major emerging economies who use a credit card or borrow from a financial institution are financially literate.",
+    source: "Klapper & Lusardi, 2020",
+    href: "https://doi.org/10.1111/fima.12283",
+  },
+  {
+    text: "Used well, financial services change lives. In Kenya, access to mobile money is estimated to have lifted around 2% of households out of extreme poverty, with the largest gains for households headed by women.",
+    source: "Suri & Jack, Science, 2016",
+    href: "https://www.science.org/doi/10.1126/science.aah5309",
+  },
+  {
+    text: "Young people are already financial users. About 60% of 15-year-olds in OECD countries have a bank account or payment card, so learning to manage money safely cannot wait until adulthood.",
+    source: "OECD PISA 2022",
+    href: "https://www.oecd.org/en/topics/sub-issues/student-financial-literacy.html",
+  },
+];
+
+const inclusionQuotes = [
+  {
+    quote: "Financial literacy is now also recognised as a life skill for the 21st century.",
+    source: "OECD, PISA 2022 Results, Volume IV (2024)",
+    href: "https://www.oecd.org/en/publications/pisa-2022-results-volume-iv_5a849c2a-en/full-report/component-2.html",
+  },
+  {
+    quote: "The financial education of our daughters and sons represents the most effective path…",
+    source: "H.M. Queen Máxima of the Netherlands, UN Secretary-General's Special Advocate, Global Money Week 2021",
+    href: "https://unsgsa.org/speeches/unsgsa-queen-maxima-virtual-opening-remarks-global-money-week-2021",
+  },
+];
+
 const advanced = [
   { title: "Stock market simulation games.", text: "Students manage a virtual portfolio using real market data, experiencing diversification, volatility and long-term investing without risking real money." },
   { title: "Real-world case studies.", text: "Students analyse real household, business and market situations to understand how financial decisions, good and bad, play out over time." },
@@ -154,6 +213,92 @@ function Page() {
           </div>
           <p className="mt-10 max-w-3xl border-l-2 border-brand pl-6 text-lg font-medium">
             When young people learn to save, plan and invest wisely, they make fewer costly financial mistakes, build more secure futures and contribute to more stable, resilient economies.
+          </p>
+        </div>
+      </section>
+
+      <section className="section border-t border-border">
+        <div className="container-x">
+          <SectionHead
+            eyebrow="From literacy to inclusion"
+            title="Financial literacy today, financial inclusion tomorrow"
+            intro="Our mission is financial literacy: giving children the knowledge, skills and confidence to manage money well. Financial inclusion – the ability to use useful, affordable financial services such as payments, savings, credit and insurance, delivered responsibly – is the long-term outcome that literacy makes possible. Access to financial services is growing fast; the knowledge to use them well must grow with it."
+          />
+
+          <h3 className="mt-14 text-2xl md:text-3xl">The inclusion picture</h3>
+          <div className="mt-8 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+            {inclusionStats.map((s) => (
+              <div key={s.figure} className="flex flex-col bg-card p-8">
+                <span className="font-display text-4xl text-brand">{s.figure}</span>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                <a href="https://www.worldbank.org/en/news/press-release/2025/07/16/mobile-phone-technology-powers-saving-surge-in-developing-economies" target="_blank" rel="noopener noreferrer" className="mt-auto pt-5 text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline">
+                  World Bank, Global Findex 2025
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="mt-16 text-2xl md:text-3xl">Financial inclusion at a glance</h3>
+          <div className="mt-8 overflow-x-auto border border-border">
+            <table className="w-full min-w-[36rem] border-collapse bg-card text-left text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="p-4 font-semibold">Indicator</th>
+                  <th className="p-4 font-semibold">Earlier</th>
+                  <th className="p-4 font-semibold">2024</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inclusionTable.map((row) => (
+                  <tr key={row.indicator} className="border-b border-border last:border-b-0">
+                    <td className="p-4">{row.indicator}</td>
+                    <td className="p-4 text-muted-foreground">{row.earlier}</td>
+                    <td className="p-4 font-semibold">{row.now}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Source:{" "}
+            <a href="https://www.worldbank.org/en/publication/globalfindex" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline-offset-4 hover:underline">
+              World Bank, Global Findex Database 2025
+            </a>{" "}
+            (data for 2024)
+          </p>
+
+          <div className="mt-16 grid items-center gap-14 lg:grid-cols-2">
+            <div>
+              <h3 className="text-2xl md:text-3xl">Why inclusion starts with literacy</h3>
+              <div className="mt-6 space-y-6">
+                {literacyFirst.map((p) => (
+                  <p key={p.source} className="text-muted-foreground">
+                    {p.text}{" "}
+                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline">
+                      {p.source}
+                    </a>
+                  </p>
+                ))}
+              </div>
+            </div>
+            <img src={literacyStudents} alt="Secondary school students planning a budget on a tablet" loading="lazy" width={1024} height={768} className="aspect-[4/3] w-full object-cover" />
+          </div>
+
+          <div className="mt-16 grid gap-px bg-border md:grid-cols-2">
+            {inclusionQuotes.map((q) => (
+              <figure key={q.source} className="flex flex-col bg-card p-8">
+                <blockquote className="font-display text-xl leading-relaxed">&ldquo;{q.quote}&rdquo;</blockquote>
+                <figcaption className="mt-auto pt-5">
+                  <a href={q.href} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline">
+                    {q.source}
+                  </a>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <p className="mt-10 max-w-3xl border-l-2 border-brand pl-6 text-lg font-medium">
+            We teach financial literacy in the classroom today, so that tomorrow's adults can take part fully and safely in the financial system.
           </p>
         </div>
       </section>
