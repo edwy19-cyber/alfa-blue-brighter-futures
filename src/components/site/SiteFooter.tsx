@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/alfa-blue-logo-horizontal.png.asset.json";
 import { openCookieSettings } from "@/components/site/CookieBanner";
 import { LEGAL_NAME, NAV, REGISTERED_ADDRESS } from "@/content/site";
 
@@ -8,8 +7,8 @@ export function SiteFooter() {
     <footer className="bg-deep">
       <div className="container-x grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Link to="/" aria-label="ALFA BLUE home" className="inline-block bg-background p-4">
-            <img src={logo.url} alt="ALFA BLUE" className="h-auto w-full max-w-[220px]" width={1920} height={540} />
+          <Link to="/" aria-label="ALFA BLUE – Home" className="inline-block max-w-full bg-background p-4">
+            <img src="/images/alfa-blue-h-logo.png" alt="" className="h-auto w-full max-w-[240px]" width={1920} height={641} />
           </Link>
           <p className="mt-4 max-w-sm text-sm text-primary-foreground/70">
             Empowering the Next Generation Through Digital and Financial Literacy. A commercially operated
@@ -33,7 +32,7 @@ export function SiteFooter() {
           <address className="not-italic">
             {REGISTERED_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
           </address>
-          <p className="mt-3">alfablueme.com</p>
+          <p className="mt-3"><a href="mailto:ReachUs@alfablueme.com" className="text-primary-foreground/80 hover:text-primary-foreground">ReachUs@alfablueme.com</a></p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/10">

@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/alfa-blue-logo-vertical.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { NAV } from "@/content/site";
 
@@ -10,8 +9,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
       <div className="container-x flex h-28 items-center justify-between gap-6 md:h-32">
-        <Link to="/" aria-label="ALFA BLUE home" className="shrink-0">
-          <img src={logo.url} alt="ALFA BLUE" className="h-auto max-h-[98px] w-auto max-w-[84px] md:max-h-28 md:max-w-[91px]" width={723} height={890} />
+        <Link to="/" aria-label="ALFA BLUE – Home" className="shrink-0">
+          <img src="/images/alfa-blue-header-logo.png" alt="" className="h-auto max-h-[98px] w-auto md:max-h-28" width={1130} height={1392} />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {NAV.slice(1, 5).map((n) => (

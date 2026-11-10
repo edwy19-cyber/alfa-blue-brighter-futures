@@ -31,3 +31,4 @@ use the editor.
 
 - Site copy and nav live in `src/content/site.ts` (with `pageHead()` per route) so future Arabic/French versions can mirror one structure.
 - Enquiry validation lives in `src/lib/enquiry.ts` (shared by client and server function); delivery is not yet wired to email/storage.
+- Shared header and footer logos use user-requested static paths under `public/images`; retain original bytes and proportions to preserve the supplied artwork.
