@@ -77,7 +77,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Legal" title="Privacy Statement" intro={`Effective date: 08 November 2026. This statement explains how ${LEGAL_NAME} collects, uses, shares and protects personal data.`} />
+      <PageHero eyebrow="Legal" title="Privacy Statement" intro={`Effective date: 08 Nov 2026. This statement explains how ${LEGAL_NAME} collects, uses, shares and protects personal data.`} />
       <section className="section">
         <div className="container-x max-w-4xl">
           <Section id="who-we-are" title="1. Who we are and scope">
@@ -153,10 +153,10 @@ function Page() {
               head={["Type", "Purpose", "Consent needed"]}
               rows={[
                 ["Strictly necessary", "Core site functions and security", "No"],
-                ["Analytics", "Visitor statistics", "Yes"],
+                ["Analytics", "Visitor statistics via our website platform, Lovable", "Yes"],
               ]}
             />
-            <p>You can block cookies in your browser settings. Blocking necessary cookies may affect how the Website works.</p>
+            <p>You can manage your choices through our cookie banner at any time, or block cookies in your browser settings. Blocking necessary cookies may affect how the Website works.</p>
           </Section>
 
           <Section id="other-terms" title="8. Other terms and contact">
@@ -168,7 +168,7 @@ function Page() {
               <p className="font-semibold text-foreground">{LEGAL_NAME}</p>
               <p>Attn: Privacy</p>
               {REGISTERED_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
-              <p className="mt-2">Email: <a href="mailto:a.edwy@alfablueme.com" className="font-medium text-primary underline-offset-4 hover:underline">a.edwy@alfablueme.com</a></p>
+              <p className="mt-2">Email: <a href="mailto:ReachUs@alfablueme.com" className="font-medium text-primary underline-offset-4 hover:underline">ReachUs@alfablueme.com</a></p>
             </address>
           </Section>
         </div>

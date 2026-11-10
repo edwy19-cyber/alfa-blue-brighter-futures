@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/alfa-blue-logo-horizontal.png.asset.json";
+import { openCookieSettings } from "@/components/site/CookieBanner";
 import { LEGAL_NAME, NAV, REGISTERED_ADDRESS } from "@/content/site";
 
 export function SiteFooter() {
@@ -38,7 +39,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row md:justify-between">
           <p>© {new Date().getFullYear()} {LEGAL_NAME}. All rights reserved.</p>
-          <Link to="/privacy" className="underline-offset-4 hover:text-primary-foreground hover:underline">Privacy Statement</Link>
+          <div className="flex gap-4"><Link to="/privacy" className="underline-offset-4 hover:text-primary-foreground hover:underline">Privacy Statement</Link><button type="button" onClick={openCookieSettings} className="underline-offset-4 hover:text-primary-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2">Cookie settings</button></div>
         </div>
       </div>
     </footer>
