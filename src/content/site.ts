@@ -5,6 +5,7 @@ export const NAV = [
   { to: "/financial-literacy", label: "Financial Literacy" },
   { to: "/partnerships", label: "Partnerships & Impact" },
   { to: "/about", label: "About & Expertise" },
+  { to: "/safeguarding", label: "Safeguarding" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

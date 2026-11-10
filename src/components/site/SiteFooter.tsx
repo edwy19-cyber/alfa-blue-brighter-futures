@@ -18,7 +18,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow">Explore</p>
           <ul className="mt-4 space-y-2 text-sm">
-            {NAV.map((n) => (
+            {NAV.filter((n) => n.to !== "/safeguarding").map((n) => (
               <li key={n.to}>
                 <Link to={n.to} className="text-primary-foreground/80 hover:text-primary-foreground">{n.label}</Link>
               </li>
@@ -38,7 +38,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row md:justify-between">
           <p>© {new Date().getFullYear()} {LEGAL_NAME}. All rights reserved.</p>
-          <div className="flex gap-4"><Link to="/privacy" className="underline-offset-4 hover:text-primary-foreground hover:underline">Privacy Statement</Link><button type="button" onClick={openCookieSettings} className="underline-offset-4 hover:text-primary-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2">Cookie settings</button></div>
+          <div className="flex gap-4"><Link to="/privacy" className="underline-offset-4 hover:text-primary-foreground hover:underline">Privacy Statement</Link><Link to="/safeguarding" className="underline-offset-4 hover:text-primary-foreground hover:underline">Safeguarding</Link><button type="button" onClick={openCookieSettings} className="underline-offset-4 hover:text-primary-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2">Cookie settings</button></div>
         </div>
       </div>
     </footer>

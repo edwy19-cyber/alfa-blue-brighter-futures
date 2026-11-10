@@ -13,7 +13,7 @@ export function SiteHeader() {
           <img src="/images/alfa-blue-header-logo.png" alt="" className="h-auto max-h-[98px] w-auto md:max-h-28" width={1130} height={1392} />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
-          {NAV.slice(1, 5).map((n) => (
+          {NAV.slice(1, 6).map((n) => (
             <Link
               key={n.to}
               to={n.to}
