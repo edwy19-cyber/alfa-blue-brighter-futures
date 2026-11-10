@@ -50,6 +50,18 @@ function Index() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container-x mx-auto max-w-3xl py-6 text-center">
+          <p className="eyebrow">Our vision</p>
+          <p className="mt-6 font-display text-2xl leading-snug md:text-4xl">To build a brighter, more inclusive future by preparing the next generation with the digital skills and financial literacy they need to thrive.</p>
+          <p className="mt-6 text-lg text-muted-foreground">Every young learner should have the confidence to code, create, and take part fully in tomorrow's economy.</p>
+          <figure className="mx-auto mt-12 max-w-xl border-t border-border pt-10">
+            <blockquote className="font-display text-xl italic">“The future belongs to those who believe in the beauty of their dreams.”</blockquote>
+            <figcaption className="mt-4 text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section id="initiatives" className="section">
         <div className="container-x">
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
