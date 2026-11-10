@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   head: () =>
     pageHead(
       "About & Expertise",
-      "ALFA BLUE's strategic advisory and partnership-development role, its leadership and its work connecting curriculum providers, delivery organisations and funders.",
+      "ALFA BLUE's strategic advisory and partnership-development role, its leadership and its work connecting curriculum providers, delivery organisations and funders.", "/about"
     ),
   component: Page,
 });

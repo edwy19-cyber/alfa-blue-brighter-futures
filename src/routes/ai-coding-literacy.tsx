@@ -8,7 +8,7 @@ export const Route = createFileRoute("/ai-coding-literacy")({
   head: () =>
     pageHead(
       "AI, Computer Coding & Digital Literacy",
-      "In partnership with Logiscool, ALFA BLUE brings EAF-certified AI, coding and digital literacy education to school-age students through NGO, school and sponsor partnerships.",
+      "In partnership with Logiscool, ALFA BLUE brings EAF-certified AI, coding and digital literacy education to school-age students through NGO, school and sponsor partnerships.", "/ai-coding-literacy"
     ),
   component: Page,
 });

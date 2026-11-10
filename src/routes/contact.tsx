@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     pageHead(
       "Contact",
-      "Institutional enquiries for NGO partnerships, funding and sponsorship, schools and expert collaboration with ALFA BLUE.",
+      "Institutional enquiries for NGO partnerships, funding and sponsorship, schools and expert collaboration with ALFA BLUE.", "/contact"
     ),
   component: Page,
 });

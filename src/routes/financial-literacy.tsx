@@ -7,7 +7,7 @@ export const Route = createFileRoute("/financial-literacy")({
   head: () =>
     pageHead(
       "Financial Literacy for Life",
-      "Financial Literacy for Life is an ALFA BLUE educational initiative bringing age-appropriate money management, saving, investing and planning skills to school students.",
+      "Financial Literacy for Life is an ALFA BLUE educational initiative bringing age-appropriate money management, saving, investing and planning skills to school students.", "/financial-literacy"
     ),
   component: Page,
 });

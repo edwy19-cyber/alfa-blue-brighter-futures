@@ -6,7 +6,7 @@ export const Route = createFileRoute("/privacy")({
   head: () =>
     pageHead(
       "Privacy Statement",
-      "How ALFA BLUE Management Consulting LLC collects, uses, shares and protects personal data on this website and in its business relationships.",
+      "How ALFA BLUE Management Consulting LLC collects, uses, shares and protects personal data on this website and in its business relationships.", "/privacy"
     ),
   component: Page,
 });
