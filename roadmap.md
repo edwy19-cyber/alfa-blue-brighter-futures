@@ -9,5 +9,5 @@
 - [x] Our Approach page at /approach, /impact redirect, footer link.
 - [x] Partnerships hero: new heading, hero image, Learn more row, no duplicate images.
 - [x] AI & Coding: Scoolcode intro text, classroom images spread across page.
-- [ ] Insert Logiscool logo next to "The learning platform behind our programmes" heading.
-- [ ] Site-wide text review (uploaded brief): rename "Partner With Us" buttons to "Collaborate With Us" (all link to /contact); apply positioning rules (no funds through ALFA BLUE, no delivery to children, no impact reporting claims, no named NGOs/sponsors, Funders & sponsors rewording, literacy vs inclusion wording, ReachUs@alfablueme.com as only contact email); list every before/after change.
+- [x] Insert Logiscool logo next to "The learning platform behind our programmes" heading.
+- [x] Site-wide text review (uploaded brief): rename "Partner With Us" buttons to "Collaborate With Us" (all link to /contact); apply positioning rules (no funds through ALFA BLUE, no delivery to children, no impact reporting claims, no named NGOs/sponsors, Funders & sponsors rewording, literacy vs inclusion wording, ReachUs@alfablueme.com as only contact email); list every before/after change.
