@@ -20,6 +20,7 @@ import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SafeguardingRouteImport } from './routes/safeguarding'
+import { Route as SponsorRouteImport } from './routes/sponsor'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +77,11 @@ const SafeguardingRoute = SafeguardingRouteImport.update({
   path: '/safeguarding',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SponsorRoute = SponsorRouteImport.update({
+  id: '/sponsor',
+  path: '/sponsor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
+  '/sponsor': typeof SponsorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByTo {
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
+  '/sponsor': typeof SponsorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +124,7 @@ export interface FileRoutesById {
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
+  '/sponsor': typeof SponsorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +140,7 @@ export interface FileRouteTypes {
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
+    | '/sponsor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +154,7 @@ export interface FileRouteTypes {
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
+    | '/sponsor'
   id:
     | '__root__'
     | '/'
@@ -157,6 +168,7 @@ export interface FileRouteTypes {
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
+    | '/sponsor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,6 +183,7 @@ export interface RootRouteChildren {
   PartnershipsRoute: typeof PartnershipsRoute
   PrivacyRoute: typeof PrivacyRoute
   SafeguardingRoute: typeof SafeguardingRoute
+  SponsorRoute: typeof SponsorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SafeguardingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sponsor': {
+      id: '/sponsor'
+      path: '/sponsor'
+      fullPath: '/sponsor'
+      preLoaderRoute: typeof SponsorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -267,6 +287,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartnershipsRoute: PartnershipsRoute,
   PrivacyRoute: PrivacyRoute,
   SafeguardingRoute: SafeguardingRoute,
+  SponsorRoute: SponsorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

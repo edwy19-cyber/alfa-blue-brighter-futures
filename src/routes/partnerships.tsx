@@ -7,7 +7,7 @@ export const Route = createFileRoute("/partnerships")({
   head: () =>
     pageHead(
       "Partnerships & Impact",
-      "How ALFA BLUE proposes to work with NGOs, foundations, sponsors and schools — from needs assessment to programme delivery and impact evaluation.", "/partnerships"
+      "How ALFA BLUE proposes to work with NGOs, foundations, sponsors and schools — from needs assessment to programme delivery and partner reporting.", "/partnerships"
     ),
   component: Page,
 });
@@ -22,7 +22,7 @@ const partners = [
   {
     title: "Foundations & development organisations",
     profile: "Philanthropic foundations, development agencies and multilateral programmes focused on education, digital inclusion, youth employability or gender equity.",
-    offer: "Programmes designed with clear objectives, indicators and independent evaluation from the outset, with transparent reporting.",
+    offer: "Programmes designed with clear objectives and quality standards from the outset, with transparent reporting.",
     enquiry: "Funding & sponsorship",
   },
   {
@@ -41,10 +41,10 @@ const partners = [
 
 const pathway = [
   { title: "Needs assessment", text: "Understand the community, existing provision, infrastructure and learner needs." },
-  { title: "Programme design", text: "Select curriculum, delivery model, educator training and success measures." },
+  { title: "Programme design", text: "Select curriculum, delivery model, educator training and quality standards." },
   { title: "Funding", text: "Structure sponsorship, philanthropic or institutional funding for the programme." },
   { title: "Delivery", text: "Implement through authorised partners, with coordination and quality oversight." },
-  { title: "Impact evaluation", text: "Delivery partners measure learning outcomes against agreed indicators and report to their own sponsors." },
+  { title: "Partner reporting", text: "Delivery partners report on their programmes directly to their own sponsors." },
   { title: "Scale & refine", text: "Use evidence to improve the programme and extend it to new communities." },
 ];
 
@@ -96,10 +96,10 @@ function Page() {
           <div className="mt-12 border border-border bg-card p-8 md:p-10">
             <h3 className="text-2xl">In cooperation with an AI learning-analytics partner</h3>
             <p className="mt-4 text-muted-foreground">
-              Needs assessment and impact evaluation are supported by a K-12 education-technology partner based in Asia, whose patent-pending AI engine runs adaptive diagnostic assessments to identify each student's individual learning gaps and recommend personalised remediation. Its platform gives teachers, school leaders and parents clear, data-driven insight into progress, and is used by leading private schools.
+              Needs assessment and progress tracking are supported by a K-12 education-technology partner based in Asia, whose patent-pending AI engine runs adaptive diagnostic assessments to identify each student's individual learning gaps and recommend personalised remediation. Its platform gives teachers, school leaders and parents clear, data-driven insight into progress, and is used by leading private schools.
             </p>
             <p className="mt-4 text-muted-foreground">
-              This allows delivery partners to establish a reliable baseline before a programme starts and to measure learning gains against agreed indicators at the end.
+              This allows delivery partners to establish a reliable baseline before a programme starts. Delivery partners can use the platform's built-in assessments to follow learners' progress.
             </p>
           </div>
         </div>
