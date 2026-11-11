@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import meetingAsset from "@/assets/partnerships-meeting.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CtaBand, NumberedList, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -73,11 +72,6 @@ function Page() {
         </div>
       </section>
       <section className="section">
-        <div className="container-x">
-          <img src={meetingAsset.url} alt="Education partners and community organisations collaborating on an inclusive education programme" width={1672} height={941} className="aspect-[16/9] w-full object-cover" />
-        </div>
-      </section>
-      <section className="section pt-0">
         <div className="container-x">
           <SectionHead eyebrow="Who we work with" title="Partners we seek" />
           <div className="mt-12 grid gap-8 md:grid-cols-2">
