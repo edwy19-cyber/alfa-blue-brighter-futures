@@ -24,6 +24,9 @@ export function SiteFooter() {
               </li>
             ))}
             <li>
+              <Link to="/approach" className="text-primary-foreground/80 hover:text-primary-foreground">Our Approach</Link>
+            </li>
+            <li>
               <Link to="/how-sponsorship-works" className="text-primary-foreground/80 hover:text-primary-foreground">How Sponsorship Works</Link>
             </li>
           </ul>

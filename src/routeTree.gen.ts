@@ -12,9 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AiCodingLiteracyRouteImport } from './routes/ai-coding-literacy'
+import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
 import { Route as HowSponsorshipWorksRouteImport } from './routes/how-sponsorship-works'
+import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SafeguardingRouteImport } from './routes/safeguarding'
@@ -34,6 +36,11 @@ const AiCodingLiteracyRoute = AiCodingLiteracyRouteImport.update({
   path: '/ai-coding-literacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApproachRoute = ApproachRouteImport.update({
+  id: '/approach',
+  path: '/approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -47,6 +54,11 @@ const FinancialLiteracyRoute = FinancialLiteracyRouteImport.update({
 const HowSponsorshipWorksRoute = HowSponsorshipWorksRouteImport.update({
   id: '/how-sponsorship-works',
   path: '/how-sponsorship-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactRoute = ImpactRouteImport.update({
+  id: '/impact',
+  path: '/impact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnershipsRoute = PartnershipsRouteImport.update({
@@ -69,9 +81,11 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/how-sponsorship-works': typeof HowSponsorshipWorksRoute
+  '/impact': typeof ImpactRoute
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
@@ -80,9 +94,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/how-sponsorship-works': typeof HowSponsorshipWorksRoute
+  '/impact': typeof ImpactRoute
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
@@ -92,9 +108,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-coding-literacy': typeof AiCodingLiteracyRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/how-sponsorship-works': typeof HowSponsorshipWorksRoute
+  '/impact': typeof ImpactRoute
   '/partnerships': typeof PartnershipsRoute
   '/privacy': typeof PrivacyRoute
   '/safeguarding': typeof SafeguardingRoute
@@ -105,9 +123,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ai-coding-literacy'
+    | '/approach'
     | '/contact'
     | '/financial-literacy'
     | '/how-sponsorship-works'
+    | '/impact'
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
@@ -116,9 +136,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ai-coding-literacy'
+    | '/approach'
     | '/contact'
     | '/financial-literacy'
     | '/how-sponsorship-works'
+    | '/impact'
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
@@ -127,9 +149,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ai-coding-literacy'
+    | '/approach'
     | '/contact'
     | '/financial-literacy'
     | '/how-sponsorship-works'
+    | '/impact'
     | '/partnerships'
     | '/privacy'
     | '/safeguarding'
@@ -139,9 +163,11 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AiCodingLiteracyRoute: typeof AiCodingLiteracyRoute
+  ApproachRoute: typeof ApproachRoute
   ContactRoute: typeof ContactRoute
   FinancialLiteracyRoute: typeof FinancialLiteracyRoute
   HowSponsorshipWorksRoute: typeof HowSponsorshipWorksRoute
+  ImpactRoute: typeof ImpactRoute
   PartnershipsRoute: typeof PartnershipsRoute
   PrivacyRoute: typeof PrivacyRoute
   SafeguardingRoute: typeof SafeguardingRoute
@@ -170,6 +196,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiCodingLiteracyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/approach': {
+      id: '/approach'
+      path: '/approach'
+      fullPath: '/approach'
+      preLoaderRoute: typeof ApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -189,6 +222,13 @@ declare module '@tanstack/react-router' {
       path: '/how-sponsorship-works'
       fullPath: '/how-sponsorship-works'
       preLoaderRoute: typeof HowSponsorshipWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact': {
+      id: '/impact'
+      path: '/impact'
+      fullPath: '/impact'
+      preLoaderRoute: typeof ImpactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partnerships': {
@@ -219,9 +259,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AiCodingLiteracyRoute: AiCodingLiteracyRoute,
+  ApproachRoute: ApproachRoute,
   ContactRoute: ContactRoute,
   FinancialLiteracyRoute: FinancialLiteracyRoute,
   HowSponsorshipWorksRoute: HowSponsorshipWorksRoute,
+  ImpactRoute: ImpactRoute,
   PartnershipsRoute: PartnershipsRoute,
   PrivacyRoute: PrivacyRoute,
   SafeguardingRoute: SafeguardingRoute,

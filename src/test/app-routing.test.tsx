@@ -33,6 +33,22 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).toBe("/how-sponsorship-works");
   });
 
+  it("matches the approach page linked from the footer", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/approach");
+
+    expect(matches.at(-1)?.routeId).toBe("/approach");
+  });
+
+  it("redirects the old /impact address to /approach", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/impact");
+
+    expect(matches.at(-1)?.routeId).toBe("/impact");
+  });
+
   it("presets a sponsorship enquiry type the contact form actually offers", () => {
     // The contact form ignores an unknown `type` parameter and opens on its default option.
     expect(ENQUIRY_TYPES).toContain(SPONSORSHIP_ENQUIRY_TYPE);
