@@ -23,6 +23,9 @@ export function SiteFooter() {
                 <Link to={n.to} className="text-primary-foreground/80 hover:text-primary-foreground">{n.label}</Link>
               </li>
             ))}
+            <li>
+              <Link to="/how-sponsorship-works" className="text-primary-foreground/80 hover:text-primary-foreground">How Sponsorship Works</Link>
+            </li>
           </ul>
         </div>
         <div className="text-sm text-primary-foreground/70">
