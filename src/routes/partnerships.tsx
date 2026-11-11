@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import meetingAsset from "@/assets/partnerships-meeting.png.asset.json";
 import { Button } from "@/components/ui/button";
-import { CtaBand, NumberedList, PageHero, SectionHead } from "@/components/site/Blocks";
+import { CtaBand, NumberedList, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
 export const Route = createFileRoute("/partnerships")({
@@ -52,8 +52,27 @@ const pathway = [
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Partnerships & Impact" title="Working together for inclusive, measurable education" intro="The approach below describes how we envisage collaboration. Completed projects and measured outcomes will be added only once verified." />
-      <section className="section pt-0">
+      <section className="bg-deep">
+        <div className="container-x grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
+          <div className="fade-up">
+            <p className="eyebrow">Partnerships & Impact</p>
+            <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">Working together to build the skills that lead to inclusion</h1>
+            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75">The approach below describes how we envisage collaboration. Completed projects and measured outcomes will be added only once verified.</p>
+          </div>
+          <img src="/images/inclusive-education-collaboration.jpg" alt="Diverse group of educators and partners collaborating around a table" width={1600} height={900} className="aspect-[4/3] w-full rounded-sm object-cover" />
+        </div>
+      </section>
+      <section className="border-b border-border bg-secondary">
+        <div className="container-x flex flex-col gap-4 py-8 md:flex-row md:items-center md:gap-6">
+          <p className="eyebrow shrink-0">Learn more</p>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild variant="outline" className="rounded-sm"><Link to="/approach">Our Approach</Link></Button>
+            <Button asChild variant="outline" className="rounded-sm"><Link to="/how-sponsorship-works">How Sponsorship Works</Link></Button>
+            <Button asChild variant="outline" className="rounded-sm"><Link to="/safeguarding">Safeguarding</Link></Button>
+          </div>
+        </div>
+      </section>
+      <section className="section">
         <div className="container-x">
           <img src={meetingAsset.url} alt="Education partners and community organisations collaborating on an inclusive education programme" width={1672} height={941} className="aspect-[16/9] w-full object-cover" />
         </div>
