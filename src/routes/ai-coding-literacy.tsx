@@ -108,12 +108,15 @@ function Page() {
 
           <div className="mt-14"><NumberedList items={skills} /></div>
 
+          <img src="/images/k12-coding-classroom-1.jpg" alt="Primary school pupils coding a game together on laptops" loading="lazy" width={1000} height={760} className="mt-14 aspect-[21/9] w-full rounded-sm object-cover" />
+
           <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1.2fr]">
             <div>
               <h3 className="text-2xl md:text-3xl">The learning platform behind our programmes</h3>
               <p className="mt-5 text-muted-foreground">
-                Our coding and digital literacy programmes run on Logiscool's Scoolcode platform, built specifically for teaching young people. Students progress at their own pace through three stages: visual block coding, a "mix mode" that shows blocks and real code side by side, and finally text-based languages such as Python and C#. The result is a smooth transition from first steps to genuine programming.
+                The coding and digital literacy programmes run on Logiscool's Scoolcode platform, built specifically for teaching young people. Students progress at their own pace through three stages: visual block coding, a "mix mode" that shows blocks and real code side by side, and finally text-based languages such as Python and C#. The result is a smooth transition from first steps to genuine programming.
               </p>
+              <img src="/images/k12-coding-classroom-2.jpg" alt="Middle school students building and programming a small robot together" loading="lazy" width={1000} height={760} className="mt-8 aspect-[4/3] w-full rounded-sm object-cover" />
             </div>
             <div>
               <h4 className="eyebrow">What sets it apart</h4>
@@ -126,11 +129,6 @@ function Page() {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <img src="/images/k12-coding-classroom-1.jpg" alt="Primary school pupils coding a game together on laptops" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
-            <img src="/images/k12-coding-classroom-2.jpg" alt="Middle school students building and programming a small robot together" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
-            <img src="/images/k12-coding-classroom-3.jpg" alt="Teenagers comparing block code and Python on a laptop" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
           </div>
         </div>
       </section>
@@ -192,7 +190,9 @@ function Page() {
               </div>
             ))}
           </div>
-          <div className="mt-14 grid gap-8 md:grid-cols-2">
+          <div className="mt-14 grid items-center gap-8 lg:grid-cols-2">
+            <img src="/images/k12-coding-classroom-3.jpg" alt="Teenagers comparing block code and Python on a laptop" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
+            <div className="grid gap-8">
             <div className="border border-border bg-secondary p-8">
               <h3 className="text-xl">Global reach</h3>
               <p className="mt-3 text-sm text-muted-foreground">
@@ -204,6 +204,7 @@ function Page() {
               <p className="mt-3 text-sm text-muted-foreground">
                 Programmes are designed and reviewed with education specialists, including experts holding doctoral degrees in education, pedagogy and learning technology. We seek to work with established international and local NGOs, foundations and education authorities to reach the students who need it most.
               </p>
+            </div>
             </div>
           </div>
         </div>
