@@ -108,8 +108,6 @@ function Page() {
 
           <div className="mt-14"><NumberedList items={skills} /></div>
 
-          <img src="/images/k12-coding-classroom-1.jpg" alt="Primary school pupils coding a game together on laptops" loading="lazy" width={1000} height={760} className="mt-14 aspect-[21/9] w-full rounded-sm object-cover" />
-
           <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1.2fr]">
             <div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
