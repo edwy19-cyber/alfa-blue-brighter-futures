@@ -25,9 +25,9 @@ export function SectionHead({ eyebrow, title, intro }: { eyebrow: string; title:
   );
 }
 
-export function CtaBand({ title = "Discuss a collaboration", text = "We welcome conversations with NGOs, foundations, CSR teams, schools and education professionals." }: { title?: string; text?: string }) {
+export function CtaBand({ title = "Discuss a collaboration", text = "We welcome conversations with NGOs, foundations, CSR teams, schools and education professionals.", className = "" }: { title?: string; text?: string; className?: string }) {
   return (
-    <section className="section border-t border-border bg-secondary">
+    <section className={`section border-t border-border bg-secondary ${className}`}>
       <div className="container-x flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
         <div className="max-w-2xl">
           <div className="rule" />

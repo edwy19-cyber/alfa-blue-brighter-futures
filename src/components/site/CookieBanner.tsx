@@ -64,7 +64,7 @@ export function CookieBanner() {
         </p>
         <div className="flex flex-wrap gap-3">
           <button type="button" onClick={() => choose("accepted")} className={`${btn} bg-primary-foreground text-foreground`}>
-            Accept analytics
+            Accept
           </button>
           <button type="button" onClick={() => choose("rejected")} className={`${btn} bg-primary-foreground text-foreground`}>
             Reject

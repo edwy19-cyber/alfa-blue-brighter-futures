@@ -4,6 +4,7 @@ import hero from "@/assets/hero-classroom.jpg";
 import coding from "@/assets/coding-students.jpg";
 import finance from "@/assets/financial-classroom.jpg";
 import logoT2 from "@/assets/alfa-blue-logo-t2.png.asset.json";
+import dreams from "@/assets/teens-dreaming-of-a-greener-future.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -70,11 +71,18 @@ function Index() {
           <p className="eyebrow">Our vision</p>
           <p className="mt-6 font-display text-2xl leading-snug md:text-4xl">To build a brighter, more inclusive future by preparing the next generation with the digital skills and financial literacy they need to thrive.</p>
           <p className="mt-6 text-lg text-muted-foreground">Every young learner should have the confidence to code, create, and take part fully in tomorrow's economy.</p>
-          <figure className="mx-auto mt-12 max-w-xl border-t border-border pt-10">
-            <blockquote className="font-display text-xl italic">“The future belongs to those who believe in the beauty of their dreams.”</blockquote>
-            <figcaption className="mt-4 text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
-          </figure>
         </div>
+        <figure className="container-x mt-12 border-t border-border pt-10">
+          <img
+            src={dreams.url}
+            alt="Illustration of five hopeful teenagers looking up at a green, solar-powered city, with the words: The future belongs to those who believe in the beauty of their dreams."
+            width={1672}
+            height={941}
+            loading="lazy"
+            className="h-auto w-full object-cover"
+          />
+          <figcaption className="mt-4 text-center text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
+        </figure>
       </section>
 
       <section id="initiatives" className="section">
@@ -102,7 +110,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section bg-secondary">
+      <section className="section bg-secondary pb-10">
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.3fr]">
           <SectionHead eyebrow="Delivery model" title="An institutional model built on collaboration" intro="ALFA BLUE is a commercially operated company, not a charity. Our role is to connect the right partners and make programmes workable on the ground." />
           <ul className="divide-y divide-border border-y border-border">
@@ -116,7 +124,7 @@ function Index() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand className="pt-10" />
     </>
   );
 }
