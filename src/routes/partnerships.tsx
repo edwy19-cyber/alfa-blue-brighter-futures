@@ -16,7 +16,7 @@ const partners = [
   {
     title: "NGOs",
     profile: "Community and youth organisations, local and international, with trusted relationships in the communities they serve and a mission to widen access to quality education.",
-    offer: "A certified curriculum, educator training and programme coordination, so their reach becomes structured, measurable learning.",
+    offer: "A certified curriculum, educator training and programme coordination, so their reach becomes structured, high-quality learning.",
     enquiry: "NGO partnership",
   },
   {
@@ -28,7 +28,7 @@ const partners = [
   {
     title: "CSR & ESG teams",
     profile: "Companies whose social-impact, ESG or community-investment strategy includes education, digital skills or financial literacy, often in the markets where they operate.",
-    offer: "Credible, certified initiatives aligned with corporate commitments and the UN Sustainable Development Goals (SDG 4, Quality Education), with impact reports to stakeholders.",
+    offer: "Credible, certified initiatives aligned with corporate commitments and the UN Sustainable Development Goals (SDG 4, Quality Education).",
     enquiry: "Funding & sponsorship",
   },
   {
@@ -44,7 +44,7 @@ const pathway = [
   { title: "Programme design", text: "Select curriculum, delivery model, educator training and success measures." },
   { title: "Funding", text: "Structure sponsorship, philanthropic or institutional funding for the programme." },
   { title: "Delivery", text: "Implement through authorised partners, with coordination and quality oversight." },
-  { title: "Impact evaluation", text: "Measure learning outcomes against agreed indicators and report transparently." },
+  { title: "Impact evaluation", text: "Delivery partners measure learning outcomes against agreed indicators and report to their own sponsors." },
   { title: "Scale & refine", text: "Use evidence to improve the programme and extend it to new communities." },
 ];
 
@@ -56,7 +56,7 @@ function Page() {
           <div className="fade-up">
             <p className="eyebrow">Partnerships & Impact</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">Working together to build the skills that lead to inclusion</h1>
-            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75">The approach below describes how we envisage collaboration. Completed projects and measured outcomes will be added only once verified.</p>
+            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75">The approach below describes how we envisage collaboration. Completed projects and outcomes reported by delivery partners will be added only once verified.</p>
           </div>
           <img src="/images/inclusive-education-collaboration.jpg" alt="Diverse group of educators and partners collaborating around a table" width={1600} height={900} className="aspect-[4/3] w-full rounded-sm object-cover" />
         </div>
@@ -91,7 +91,7 @@ function Page() {
       </section>
       <section className="section bg-secondary">
         <div className="container-x">
-          <SectionHead eyebrow="Proposed pathway" title="From needs assessment to evaluated impact" />
+          <SectionHead eyebrow="Proposed pathway" title="From needs assessment to local delivery" />
           <div className="mt-14"><NumberedList items={pathway} /></div>
           <div className="mt-12 border border-border bg-card p-8 md:p-10">
             <h3 className="text-2xl">In cooperation with an AI learning-analytics partner</h3>
@@ -99,7 +99,7 @@ function Page() {
               Needs assessment and impact evaluation are supported by a K-12 education-technology partner based in Asia, whose patent-pending AI engine runs adaptive diagnostic assessments to identify each student's individual learning gaps and recommend personalised remediation. Its platform gives teachers, school leaders and parents clear, data-driven insight into progress, and is used by leading private schools.
             </p>
             <p className="mt-4 text-muted-foreground">
-              This allows us to establish a reliable baseline before a programme starts and to measure learning gains against agreed indicators at the end.
+              This allows delivery partners to establish a reliable baseline before a programme starts and to measure learning gains against agreed indicators at the end.
             </p>
           </div>
         </div>

@@ -72,7 +72,7 @@ const roles = [
 const delivery = [
   { title: "Within schools", text: "Integrated into the timetable or offered as after-school enrichment, taught by trained educators using a certified curriculum, with progress tracked on the learning platform." },
   { title: "Through NGOs", text: "Community programmes that reach students outside formal schooling, delivered by trusted local organisations with our coordination and quality oversight." },
-  { title: "Sponsored cohorts", text: "CSR- and foundation-funded places for students from communities with limited access, with transparent reporting to sponsors." },
+  { title: "Sponsored cohorts", text: "CSR- and foundation-funded places for students from communities with limited access, with funding agreed directly with the delivering partner." },
   { title: "Online and blended learning", text: "Live online classes and blended formats extend programmes to rural and remote areas where specialist teachers are scarce." },
 ];
 
@@ -112,6 +112,9 @@ function Page() {
 
           <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1.2fr]">
             <div>
+              <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[180px]" />
+              </a>
               <h3 className="text-2xl md:text-3xl">The learning platform behind our programmes</h3>
               <p className="mt-5 text-muted-foreground">
                 The coding and digital literacy programmes run on Logiscool's Scoolcode platform, built specifically for teaching young people. Students progress at their own pace through three stages: visual block coding, a "mix mode" that shows blocks and real code side by side, and finally text-based languages such as Python and C#. The result is a smooth transition from first steps to genuine programming.

@@ -33,7 +33,7 @@ function Page() {
           <div className="fade-up">
             <p className="eyebrow">About ALFA BLUE</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">Strategic advice and partnership development for education</h1>
-            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75">ALFA BLUE Management Consulting is a commercially operated company. We combine consulting experience with a commitment to inclusive education and measurable social impact.</p>
+            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75">ALFA BLUE Management Consulting is a commercially operated company. We combine consulting experience with a commitment to inclusive education and long-term social benefit.</p>
           </div>
           <img src="/images/office-meeting-room.jpg" alt="Modern meeting room overlooking a city skyline at sunset" width={1291} height={924} className="aspect-[4/3] w-full rounded-sm object-cover" />
         </div>

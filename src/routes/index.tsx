@@ -36,7 +36,7 @@ const delivery = [
   { who: "Curriculum providers", what: "Supply specialist content and platforms under their own licensing terms." },
   { who: "ALFA BLUE", what: "Develops programmes, coordinates partners and facilitates market access." },
   { who: "NGOs & schools", what: "Reach students and deliver locally with authorised educators." },
-  { who: "Funders & sponsors", what: "Enable access for underserved communities through CSR and philanthropy." },
+  { who: "Funders & sponsors", what: "Support programmes by funding NGO delivery partners directly, through CSR and philanthropy." },
 ];
 
 function Index() {
@@ -55,7 +55,7 @@ function Index() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="brand"><a href="#initiatives">Explore Our Initiatives</a></Button>
-              <Button asChild size="lg" variant="outline-light" className="rounded-sm"><Link to="/contact">Partner With Us</Link></Button>
+              <Button asChild size="lg" variant="outline-light" className="rounded-sm"><Link to="/contact">Collaborate With Us</Link></Button>
             </div>
           </div>
           <div className="relative">

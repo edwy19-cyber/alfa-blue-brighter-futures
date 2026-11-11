@@ -24,7 +24,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Button asChild variant="default" size="sm" className="rounded-sm px-4">
-            <Link to="/contact">Partner With Us</Link>
+            <Link to="/contact">Collaborate With Us</Link>
           </Button>
         </nav>
         <button className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>

@@ -36,7 +36,7 @@ export function CtaBand({ title = "Discuss a collaboration", text = "We welcome 
         </div>
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg"><Link to="/contact">Discuss a Collaboration</Link></Button>
-          <Button asChild size="lg" variant="outline" className="rounded-sm"><Link to="/partnerships">Partner With Us</Link></Button>
+          <Button asChild size="lg" variant="outline" className="rounded-sm"><Link to="/contact">Collaborate With Us</Link></Button>
         </div>
       </div>
     </section>
