@@ -114,11 +114,13 @@ function Page() {
                 <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="inline-block shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                   <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[160px]" />
                 </a>
-                <h3 className="text-2xl md:text-3xl">The learning platform behind our programmes</h3>
+                <h3 className="text-2xl md:text-3xl">Coding and AI education, with revolutionary AI-support</h3>
               </div>
-              <p className="mt-5 text-muted-foreground">
-                The coding and digital literacy programmes run on Logiscool's Scoolcode platform, built specifically for teaching young people. Students progress at their own pace through three stages: visual block coding, a "mix mode" that shows blocks and real code side by side, and finally text-based languages such as Python and C#. The result is a smooth transition from first steps to genuine programming.
-              </p>
+              <div className="mt-5 space-y-4 text-muted-foreground">
+                <p>Logiscool takes students on a unique journey, from their very first lines of code all the way to professional-level Python.</p>
+                <p>Along the way, a revolutionary AI assistant supports each student like a personal teacher.</p>
+                <p>Teachers and school leaders can follow every student's progress in real time and in detail.</p>
+              </div>
               <img src="/images/k12-coding-classroom-2.jpg" alt="Middle school students building and programming a small robot together" loading="lazy" width={1000} height={760} className="mt-8 aspect-[4/3] w-full rounded-sm object-cover" />
             </div>
             <div>

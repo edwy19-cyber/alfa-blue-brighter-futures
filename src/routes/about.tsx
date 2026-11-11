@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portraitAsset from "@/assets/ahmed-edwy-portrait.jpg.asset.json";
-import boardroomAsset from "@/assets/about-boardroom.png.asset.json";
 import { Link } from "@tanstack/react-router";
 import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -54,7 +53,7 @@ function Page() {
               <p>We are not a registered NGO or charitable foundation. Our commercial model allows us to work flexibly with non-profit, public and private partners alike.</p>
             </div>
           </div>
-          <img src={boardroomAsset.url} alt="ALFA BLUE meeting room overlooking the city" width={1291} height={924} className="aspect-[4/3] w-full object-cover" />
+          <img src="/images/partners-collaboration-meeting.jpg" alt="Diverse educators, partners and students collaborating around a conference table" width={1672} height={941} className="aspect-[4/3] w-full object-cover" />
         </div>
       </section>
       <section className="section bg-secondary">

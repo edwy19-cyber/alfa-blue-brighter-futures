@@ -66,7 +66,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section pb-10">
         <div className="container-x mx-auto max-w-3xl py-6 text-center">
           <p className="eyebrow">Our vision</p>
           <p className="mt-6 font-display text-2xl leading-snug md:text-4xl">To build a brighter, more inclusive future by preparing the next generation with the digital skills and financial literacy they need to thrive.</p>
@@ -85,7 +85,7 @@ function Index() {
         </figure>
       </section>
 
-      <section id="initiatives" className="section">
+      <section id="initiatives" className="section pt-10">
         <div className="container-x">
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
           <div className="mt-14 grid gap-10 md:grid-cols-2">

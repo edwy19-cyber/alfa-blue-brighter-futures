@@ -89,7 +89,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <section className="section bg-secondary">
+      <section className="section bg-secondary pb-10">
         <div className="container-x">
           <SectionHead eyebrow="Proposed pathway" title="From needs assessment to local delivery" />
           <div className="mt-14"><NumberedList items={pathway} /></div>
@@ -104,7 +104,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <CtaBand />
+      <CtaBand className="pt-10" />
     </>
   );
 }
