@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import finance from "@/assets/financial-classroom.jpg";
 import literacyStudents from "@/assets/financial-literacy-students.jpg";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -40,12 +39,6 @@ const research = [
     text: "A meta-analysis of 76 randomised experiments with over 160,000 participants in 33 countries found that financial education improves both financial knowledge and behaviours such as saving, with effects similar to other successful education programmes.",
     source: "Kaiser, Lusardi, Menkhoff & Urban, 2022",
     href: "https://doi.org/10.1016/j.jfineco.2021.09.022",
-  },
-  {
-    title: "More planning for retirement.",
-    text: "Each additional correct answer on a financial literacy test is linked to a 3–4 percentage-point higher chance of planning for retirement in countries as diverse as Germany, the United States, Japan and Sweden.",
-    source: "Lusardi & Mitchell, 2011",
-    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5445931",
   },
   {
     title: "Greater lifetime wealth.",
@@ -177,7 +170,7 @@ function Page() {
               Financial Literacy for Life is an ALFA BLUE educational initiative that introduces age-appropriate financial knowledge and decision-making skills to school students. It covers money management, saving, budgeting, compound growth, investing fundamentals, risk awareness and long-term financial planning, helping young people build practical capabilities regardless of their future careers.
             </p>
           </div>
-          <img src={finance} alt="Teacher discussing a simple budget with a group of students" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
+          <img src="/images/boardroom-charts-review.jpg" alt="Professionals reviewing programme charts together in a boardroom" loading="lazy" width={1672} height={941} className="aspect-[4/3] w-full object-cover" />
         </div>
       </section>
 
@@ -200,9 +193,9 @@ function Page() {
             ))}
           </div>
           <h3 className="mt-16 text-2xl md:text-3xl">What the research shows</h3>
-          <div className="mt-8 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-            {research.map((r) => (
-              <div key={r.title} className="flex flex-col bg-card p-8">
+          <div className="mt-8 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-6">
+            {research.map((r, i) => (
+              <div key={r.title} className={`flex flex-col bg-card p-8 lg:col-span-2${i === 3 ? " lg:col-start-2" : ""}${i === research.length - 1 ? " md:col-span-2 lg:col-span-2" : ""}`}>
                 <h4 className="text-lg">{r.title}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{r.text}</p>
                 <a href={r.href} target="_blank" rel="noopener noreferrer" className="mt-auto pt-5 text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline">

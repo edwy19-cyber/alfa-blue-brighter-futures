@@ -1,7 +1,7 @@
 // Central content config. Keep copy here so future Arabic/French versions can mirror this structure.
 export const NAV = [
   { to: "/", label: "Home" },
-  { to: "/ai-coding-literacy", label: "AI & Coding" },
+  { to: "/ai-coding-literacy", label: "Digital Literacy" },
   { to: "/financial-literacy", label: "Financial Literacy" },
   { to: "/partnerships", label: "Partnerships & Impact" },
   { to: "/about", label: "About & Expertise" },

@@ -47,16 +47,6 @@ const stats = [
   },
 ];
 
-const platformPoints = [
-  { title: "Learning by creating.", text: "Students build their own games, animations and apps, which keeps motivation high and turns them from consumers into makers." },
-  { title: "A clear pathway for ages 6 to 18.", text: "A modular curriculum covering more than 20 topics, from first coding steps and digital literacy to Python, AI and robotics." },
-  { title: "Adapted to every learner.", text: "Content adjusts to each student's age, level and pace, so no one is left behind or held back." },
-  { title: "Independently certified quality.", text: "Curriculum and platform certified for pedagogical quality by Education Alliance Finland." },
-  { title: "A safe learning community.", text: "Through the MyLogiscool portal, students share projects, inspire each other and earn recognition in a moderated environment." },
-  { title: "Supported educators.", text: "Teachers and instructors receive structured training, lesson materials and ongoing support." },
-  { title: "Recognised internationally.", text: "Awards include the European Franchise Federation's Best International Brand, and the company was a BETT Awards finalist." },
-];
-
 const delivery = [
   { title: "Within schools", text: "Integrated into the timetable or offered as after-school enrichment, taught by trained educators using a certified curriculum, with progress tracked on the learning platform." },
   { title: "Through NGOs", text: "Community programmes that reach students outside formal schooling, delivered by trusted local organisations with our coordination and quality oversight." },
@@ -109,21 +99,11 @@ function Page() {
                 <p>Along the way, a revolutionary AI assistant supports each student like a personal teacher.</p>
                 <p>Teachers and school leaders can follow every student's progress in real time and in detail.</p>
               </div>
+              <img src="/images/eaf-certified-pedagogical-quality.png" alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={640} height={661} className="mt-8 h-auto w-[130px] md:w-[160px]" />
             </div>
             <img src="/images/students-robotics-project.jpg" alt="Four teenagers assembling and programming a small robot in a classroom" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
           </div>
 
-          <div className="mt-14">
-            <h4 className="eyebrow">What sets it apart</h4>
-            <ul className="mt-6 grid gap-x-10 gap-y-5 md:grid-cols-2">
-              {platformPoints.map((p) => (
-                <li key={p.title} className="border-l-2 border-brand pl-5">
-                  <p className="font-semibold">{p.title}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 
