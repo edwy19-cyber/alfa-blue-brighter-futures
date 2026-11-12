@@ -96,7 +96,7 @@ function Page() {
 
           <div className="mt-14"><NumberedList items={skills} /></div>
 
-          <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
+          <div className="mt-14 grid items-center gap-14 md:grid-cols-[1.1fr_1fr]">
             <div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="inline-block shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
@@ -138,7 +138,7 @@ function Page() {
               </div>
             ))}
           </div>
-          <div className="mt-14 grid items-center gap-8 lg:grid-cols-2">
+          <div className="mt-14 grid items-center gap-8 md:grid-cols-2">
             <img src="/images/k12-coding-classroom-3.jpg" alt="Teenagers comparing block code and Python on a laptop" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
             <div className="grid gap-8">
             <div className="border border-border bg-secondary p-8">

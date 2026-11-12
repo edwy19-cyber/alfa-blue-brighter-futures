@@ -170,7 +170,7 @@ function Page() {
       <PageHero eyebrow="Initiative 02" title="Financial literacy as an essential life skill" intro="Every student will manage money, whatever career they choose. Practical understanding should begin long before the first payslip." />
 
       <section className="section">
-        <div className="container-x grid items-center gap-14 lg:grid-cols-2">
+        <div className="container-x grid items-center gap-14 md:grid-cols-2">
           <div>
             <SectionHead eyebrow="Financial Literacy for Life" title="Practical capabilities for every student" />
             <p className="mt-5 text-lg text-muted-foreground">
@@ -267,7 +267,7 @@ function Page() {
             (data for 2024)
           </p>
 
-          <div className="mt-16 grid items-center gap-14 lg:grid-cols-2">
+          <div className="mt-16 grid items-center gap-14 md:grid-cols-2">
             <div>
               <h3 className="text-2xl md:text-3xl">Why inclusion starts with literacy</h3>
               <div className="mt-6 space-y-6">

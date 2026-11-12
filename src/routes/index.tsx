@@ -44,7 +44,7 @@ function Index() {
   return (
     <>
       <section className="bg-deep relative overflow-hidden">
-        <div className="container-x grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
+        <div className="container-x grid items-center gap-12 py-16 md:py-24 md:grid-cols-[1.05fr_1fr]">
           <div className="fade-up">
             <p className="eyebrow">ALFA BLUE Management Consulting</p>
             <h1 className="mt-6 text-4xl leading-[1.05] md:text-6xl">

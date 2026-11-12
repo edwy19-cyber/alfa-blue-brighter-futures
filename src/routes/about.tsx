@@ -28,7 +28,7 @@ function Page() {
   return (
     <>
       <section className="bg-deep">
-        <div className="container-x grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
+        <div className="container-x grid items-center gap-12 py-16 md:py-24 md:grid-cols-[1.05fr_1fr]">
           <div className="fade-up">
             <p className="eyebrow">About ALFA BLUE</p>
             <h1 className="mt-5 max-w-4xl text-4xl leading-[1.08] md:text-6xl">Strategic advice and partnership development for education</h1>
