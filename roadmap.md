@@ -13,3 +13,4 @@
 - [x] Site-wide text review (uploaded brief): rename "Partner With Us" buttons to "Collaborate With Us" (all link to /contact); apply positioning rules (no funds through ALFA BLUE, no delivery to children, no impact reporting claims, no named NGOs/sponsors, Funders & sponsors rewording, literacy vs inclusion wording, ReachUs@alfablueme.com as only contact email); list every before/after change.
 
 - [x] Fixes: /sponsor redirect, Partnerships wording, remove draft policy copy
+- [x] Image layouts: move every full-width image beside its text (Home vision artwork, Home initiative photos); two columns from 768px up, image below text on mobile; leave images already beside text, plus logos/badges/icons, untouched.

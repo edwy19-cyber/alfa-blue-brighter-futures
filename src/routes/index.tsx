@@ -67,43 +67,47 @@ function Index() {
       </section>
 
       <section className="section pb-10">
-        <div className="container-x mx-auto max-w-3xl py-6 text-center">
-          <p className="eyebrow">Our vision</p>
-          <p className="mt-6 font-display text-2xl leading-snug md:text-4xl">To build a brighter, more inclusive future by preparing the next generation with the digital skills and financial literacy they need to thrive.</p>
-          <p className="mt-6 text-lg text-muted-foreground">Every young learner should have the confidence to code, create, and take part fully in tomorrow's economy.</p>
+        <div className="container-x grid items-center gap-14 md:grid-cols-2">
+          <div>
+            <p className="eyebrow">Our vision</p>
+            <p className="mt-6 font-display text-2xl leading-snug md:text-4xl">To build a brighter, more inclusive future by preparing the next generation with the digital skills and financial literacy they need to thrive.</p>
+            <p className="mt-6 text-lg text-muted-foreground">Every young learner should have the confidence to code, create, and take part fully in tomorrow's economy.</p>
+          </div>
+          <figure>
+            <img
+              src={dreams.url}
+              alt="Illustration of five hopeful teenagers looking up at a green, solar-powered city, with the words: The future belongs to those who believe in the beauty of their dreams."
+              width={1672}
+              height={941}
+              loading="lazy"
+              className="h-auto w-full object-cover"
+            />
+            <figcaption className="mt-4 text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
+          </figure>
         </div>
-        <figure className="container-x mt-12 border-t border-border pt-10">
-          <img
-            src={dreams.url}
-            alt="Illustration of five hopeful teenagers looking up at a green, solar-powered city, with the words: The future belongs to those who believe in the beauty of their dreams."
-            width={1672}
-            height={941}
-            loading="lazy"
-            className="h-auto w-full object-cover"
-          />
-          <figcaption className="mt-4 text-center text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
-        </figure>
       </section>
 
       <section id="initiatives" className="section pt-10">
         <div className="container-x">
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
-          <div className="mt-14 grid gap-10 md:grid-cols-2">
+          <div className="mt-14 space-y-16">
             {[
               { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool — an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
               { img: finance, to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
-            ].map((p) => (
-              <article key={p.to} className="group">
-                <div className="overflow-hidden">
+            ].map((p, i) => (
+              <article key={p.to} className="group grid items-center gap-10 md:grid-cols-2">
+                <div className={i % 2 === 0 ? "md:order-2" : ""}>
+                  <span className="eyebrow inline-block">{p.tag}</span>
+                  <h3 className="mt-4 text-2xl md:text-3xl">{p.title}</h3>
+                  <p className="mt-3 text-muted-foreground">{p.text}</p>
+                  {"note" in p && p.note && <p className="mt-3 border-l-2 border-brand pl-4 text-sm text-muted-foreground">{p.note}</p>}
+                  <Link to={p.to} className="mt-5 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
+                    Learn more <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className={`overflow-hidden ${i % 2 === 0 ? "md:order-1" : ""}`}>
                   <img src={p.img} alt="" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                 </div>
-                <span className="eyebrow mt-6 inline-block">{p.tag}</span>
-                <h3 className="mt-4 text-2xl md:text-3xl">{p.title}</h3>
-                <p className="mt-3 text-muted-foreground">{p.text}</p>
-                {"note" in p && p.note && <p className="mt-3 border-l-2 border-brand pl-4 text-sm text-muted-foreground">{p.note}</p>}
-                <Link to={p.to} className="mt-5 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
-                  Learn more <ArrowRight className="h-4 w-4" />
-                </Link>
               </article>
             ))}
           </div>
