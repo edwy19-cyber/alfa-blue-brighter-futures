@@ -96,7 +96,7 @@ function Page() {
 
           <div className="mt-14"><NumberedList items={skills} /></div>
 
-          <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1.2fr]">
+          <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
             <div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="inline-block shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
@@ -109,19 +109,20 @@ function Page() {
                 <p>Along the way, a revolutionary AI assistant supports each student like a personal teacher.</p>
                 <p>Teachers and school leaders can follow every student's progress in real time and in detail.</p>
               </div>
-              <img src="/images/k12-coding-classroom-2.jpg" alt="Middle school students building and programming a small robot together" loading="lazy" width={1000} height={760} className="mt-8 aspect-[4/3] w-full rounded-sm object-cover" />
             </div>
-            <div>
-              <h4 className="eyebrow">What sets it apart</h4>
-              <ul className="mt-6 space-y-5">
-                {platformPoints.map((p) => (
-                  <li key={p.title} className="border-l-2 border-brand pl-5">
-                    <p className="font-semibold">{p.title}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <img src="/images/students-robotics-project.jpg" alt="Four teenagers assembling and programming a small robot in a classroom" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
+          </div>
+
+          <div className="mt-14">
+            <h4 className="eyebrow">What sets it apart</h4>
+            <ul className="mt-6 grid gap-x-10 gap-y-5 md:grid-cols-2">
+              {platformPoints.map((p) => (
+                <li key={p.title} className="border-l-2 border-brand pl-5">
+                  <p className="font-semibold">{p.title}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
