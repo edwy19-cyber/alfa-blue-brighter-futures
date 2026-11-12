@@ -45,7 +45,7 @@ function Page() {
         </div>
       </section>
       <section className="section">
-        <div className="container-x grid items-center gap-14 lg:grid-cols-2">
+        <div className="container-x grid items-center gap-14 md:grid-cols-2">
           <div>
             <SectionHead eyebrow="Our role" title="Connecting the people who make programmes work" />
             <div className="mt-6 space-y-5 text-muted-foreground">
@@ -53,7 +53,7 @@ function Page() {
               <p>We are not a registered NGO or charitable foundation. Our commercial model allows us to work flexibly with non-profit, public and private partners alike.</p>
             </div>
           </div>
-          <img src="/images/partners-collaboration-meeting.jpg" alt="Diverse educators, partners and students collaborating around a conference table" width={1672} height={941} className="aspect-[4/3] w-full object-cover" />
+          <img src="/images/partners-collaboration-meeting.jpg" alt="Diverse educators, partners and students collaborating around a conference table" width={1672} height={941} className="aspect-[4/3] w-full rounded-sm object-cover" />
         </div>
       </section>
       <section className="section bg-secondary">

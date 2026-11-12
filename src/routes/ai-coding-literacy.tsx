@@ -1,6 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import coding from "@/assets/coding-students.jpg";
-import eaf from "@/assets/eaf-certified-badge.png.asset.json";
 import { CtaBand, NumberedList, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
 
@@ -57,16 +55,6 @@ const platformPoints = [
   { title: "A safe learning community.", text: "Through the MyLogiscool portal, students share projects, inspire each other and earn recognition in a moderated environment." },
   { title: "Supported educators.", text: "Teachers and instructors receive structured training, lesson materials and ongoing support." },
   { title: "Recognised internationally.", text: "Awards include the European Franchise Federation's Best International Brand, and the company was a BETT Awards finalist." },
-];
-
-const roles = [
-  {
-    who: "Curriculum partner: Logiscool",
-    text: "Logiscool supplies the specialist coding, AI and digital literacy curriculum and the Scoolcode learning platform, under its partnership and licensing arrangements with ALFA BLUE. ALFA BLUE does not own the curriculum or operate the platform.",
-    link: true,
-  },
-  { who: "ALFA BLUE (programme developer)", text: "Strategic partnerships, programme development, institutional coordination, market access and facilitation of delivery." },
-  { who: "Authorised delivery partners", text: "NGOs, schools and foundations who implement programmes with trained educators, in line with the provider's requirements." },
 ];
 
 const delivery = [
@@ -133,52 +121,6 @@ function Page() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section bg-secondary">
-        <div className="container-x grid items-start gap-14 lg:grid-cols-2">
-          <img src={coding} alt="Two students coding together on a laptop" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
-          <div>
-            <SectionHead eyebrow="Who does what" title="Clear roles, properly licensed" />
-            <ul className="mt-10 space-y-8">
-              {roles.map((r) => (
-                <li key={r.who} className="border-l-2 border-brand pl-6">
-                  {"link" in r && r.link && (
-                  <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[180px]" />
-                  </a>
-                  )}
-                  <h3 className="text-xl">{r.who}</h3>
-                  <p className="mt-2 text-muted-foreground">{r.text}</p>
-                  {"link" in r && r.link && (
-                    <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-semibold text-primary underline-offset-4 hover:underline">
-                      Visit logiscool.com
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 border border-border bg-card p-6">
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                <img src={eaf.url} alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={1984} height={2048} className="h-auto w-28 shrink-0" />
-                <div>
-                  <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <img src="/images/logiscool-logo.png" alt="Logiscool" loading="lazy" width={1024} height={306} className="h-auto w-[140px] md:w-[180px]" />
-                  </a>
-                  <h3 className="text-xl">In partnership with Logiscool</h3>
-                  <p className="mt-3 text-sm text-muted-foreground">
-                    ALFA BLUE works in partnership with{" "}
-                    <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline-offset-4 hover:underline">Logiscool</a>,
-                    an international coding and digital-literacy education network founded in 2014. Logiscool's curriculum and its Scoolcode learning platform have been independently evaluated and certified for pedagogical quality by Education Alliance Finland (EAF), an evaluator that applies criteria developed with Finnish education researchers.
-                  </p>
-                  <p className="mt-3 text-sm text-muted-foreground">
-                    Taught to students aged 6 to 18, Logiscool's programmes are delivered in more than 30 countries across five continents, through over 360 locations and to more than 320,000 students to date.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
