@@ -15,3 +15,4 @@
 - [x] Fixes: /sponsor redirect, Partnerships wording, remove draft policy copy
 - [x] Image layouts: move every full-width image beside its text (Home vision artwork, Home initiative photos); two columns from 768px up, image below text on mobile; leave images already beside text, plus logos/badges/icons, untouched.
 - [x] Safeguarding policy PDF: full policy (12 sections + 3 annexes) typeset to public/docs/safeguarding-policy.pdf; download button live on /safeguarding.
+- [x] Replace the safeguarding download with the latest uploaded approved PDF, unchanged.

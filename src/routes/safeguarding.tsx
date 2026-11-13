@@ -3,6 +3,7 @@ import { Download, ImageOff, ShieldCheck, Smartphone, UserCheck } from "lucide-r
 import { PageHero, SectionHead } from "@/components/site/Blocks";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/content/site";
+import policyPdf from "@/assets/safeguarding-policy.pdf.asset.json";
 
 export const Route = createFileRoute("/safeguarding")({
   head: () =>
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/safeguarding")({
   component: Page,
 });
 
-// Set to true once public/docs/safeguarding-policy.pdf has been uploaded.
+// The approved uploaded policy is served through the asset pointer.
 const POLICY_PDF_AVAILABLE = true;
 
 const protections = [
@@ -102,7 +103,7 @@ function Page() {
             <div className="mt-8">
               {POLICY_PDF_AVAILABLE ? (
                 <Button asChild size="lg">
-                  <a href="/docs/safeguarding-policy.pdf" download>
+                  <a href={policyPdf.url} download="safeguarding-policy.pdf">
                     <Download className="mr-2 h-4 w-4" aria-hidden="true" />
                     Download our Safeguarding Policy (PDF)
                   </a>
