@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "1db4c506-4711-4f2d-84b4-d629ed377456",
-  "project_id": "80678d53-ae52-4fc5-becd-fee88be541c2",
-  "url": "/__l5e/assets-v1/1db4c506-4711-4f2d-84b4-d629ed377456/teens-dreaming-of-a-greener-future.jpg",
-  "r2_key": "a/v1/80678d53-ae52-4fc5-becd-fee88be541c2/1db4c506-4711-4f2d-84b4-d629ed377456/teens-dreaming-of-a-greener-future.jpg",
-  "original_filename": "teens-dreaming-of-a-greener-future.jpg",
-  "size": 348620,
   "content_type": "image/jpeg",
-  "created_at": "2026-11-11T10:57:08Z"
+  "created_at": "2026-11-11T10:57:08Z",
+  "original_filename": "teens-dreaming-of-a-greener-future.jpg",
+  "project_id": "f651dca8-72fb-4a1b-9573-e716fae8a0a1",
+  "r2_key": "a/v1/f651dca8-72fb-4a1b-9573-e716fae8a0a1/1db4c506-4711-4f2d-84b4-d629ed377456/teens-dreaming-of-a-greener-future.jpg",
+  "size": 348620,
+  "url": "/__l5e/assets-v1/1db4c506-4711-4f2d-84b4-d629ed377456/teens-dreaming-of-a-greener-future.jpg",
+  "version": 1
 }
