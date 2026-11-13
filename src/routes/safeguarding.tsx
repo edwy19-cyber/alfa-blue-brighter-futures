@@ -15,7 +15,7 @@ export const Route = createFileRoute("/safeguarding")({
 });
 
 // Set to true once public/docs/safeguarding-policy.pdf has been uploaded.
-const POLICY_PDF_AVAILABLE = false;
+const POLICY_PDF_AVAILABLE = true;
 
 const protections = [
   {
