@@ -15,7 +15,7 @@ export const LEGAL_NAME = "ALFA BLUE Management Consulting LLC";
 export const REGISTERED_ADDRESS = ["16192 Coastal Highway", "Lewes, Delaware 19958", "County of Sussex, USA"] as const;
 
 const SHARE_ORIGIN = "https://alfablueme.com";
-const SHARE_IMAGE = `${SHARE_ORIGIN}/og-image.png`;
+const SHARE_IMAGE = `${SHARE_ORIGIN}/og-image-square.png`;
 
 export function pageHead(title: string, description: string, path = "/") {
   const full = `${title} | ALFA BLUE`;
@@ -30,9 +30,9 @@ export function pageHead(title: string, description: string, path = "/") {
       { property: "og:site_name", content: "ALFA BLUE" },
       { property: "og:image", content: SHARE_IMAGE },
       { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image:height", content: "1200" },
       { property: "og:image:alt", content: "ALFA BLUE logo" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: full },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: SHARE_IMAGE },
