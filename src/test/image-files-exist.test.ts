@@ -13,7 +13,7 @@ describe("site media", () => {
   it("every /images or /docs path used in code exists in public/", () => {
     for (const f of sources) {
       for (const m of readFileSync(f, "utf8").matchAll(/["'`](\/(?:images|docs)\/[^"'`]+)["'`]/g)) {
-        expect(existsSync(join("public", m[1])), `${m[1]} in ${f}`).toBe(true);
+        expect(existsSync(join("public", m[1]!)), `${m[1]} in ${f}`).toBe(true);
       }
     }
   });
