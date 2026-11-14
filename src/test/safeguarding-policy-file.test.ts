@@ -1,13 +1,10 @@
 import { describe, expect, it } from "vitest";
-import policyPdf from "@/assets/safeguarding-policy.pdf.asset.json";
+import { readFileSync, statSync } from "node:fs";
 
-describe("Safeguarding policy download", () => {
-  it("references the uploaded PDF through the asset service", () => {
-    expect(policyPdf.url).toMatch(/^\/__l5e\/assets-v1\/.+\/safeguarding-policy\.pdf$/);
-    expect(policyPdf.content_type).toBe("application/pdf");
-  });
-
-  it("retains the complete uploaded file size", () => {
-    expect(policyPdf.size).toBe(385777);
+describe("safeguarding policy download", () => {
+  it("is a real PDF file in the repository", () => {
+    const path = "public/docs/safeguarding-policy.pdf";
+    expect(statSync(path).size).toBe(385777);
+    expect(readFileSync(path).subarray(0, 4).toString()).toBe("%PDF");
   });
 });

@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import portraitAsset from "@/assets/ahmed-edwy-portrait.jpg.asset.json";
 import { Link } from "@tanstack/react-router";
 import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -20,7 +19,7 @@ const people = [
     role: "Founder and Managing Partner",
     bio: "Ahmed Edwy is a senior executive and entrepreneur with over 25 years of experience spanning corporate banking, financial services and strategic business development. As Founder and Managing Partner of ALFA BLUE, he applies his financial background and entrepreneurial perspective to expanding international partnerships in digital education and practical financial literacy for young people.",
     linkedin: "https://www.linkedin.com/in/ahmed-edwy-76695529/",
-    photo: portraitAsset.url,
+    photo: "/images/ahmed-edwy-portrait.jpg",
   },
 ];
 

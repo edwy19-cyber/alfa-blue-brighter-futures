@@ -33,3 +33,4 @@ use the editor.
 - Enquiry validation lives in `src/lib/enquiry.ts` (shared by client and server function); delivery is not yet wired to email/storage.
 - Shared header and footer logos use user-requested static paths under `public/images`; retain original bytes and proportions to preserve the supplied artwork.
 - Uploaded policy downloads use Lovable Assets pointers to preserve supplied PDF bytes without adding binaries to the repository.
+- Site images and downloads live as real files under `public/images` and `public/docs`, never as hosted `.asset.json` pointers, so external builds (GitHub/Hostinger) contain every file.

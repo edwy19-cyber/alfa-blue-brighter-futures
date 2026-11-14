@@ -3,8 +3,6 @@ import { ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-classroom.jpg";
 import coding from "@/assets/coding-students.jpg";
 import finance from "@/assets/financial-classroom.jpg";
-import logoT2 from "@/assets/alfa-blue-logo-t2.png.asset.json";
-import dreams from "@/assets/teens-dreaming-of-a-greener-future.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { CtaBand, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -61,7 +59,7 @@ function Index() {
           </div>
           <div className="relative">
             <img src={hero} alt="Students working on laptops with their teacher in a classroom" width={1600} height={1008} className="aspect-[4/3] w-full object-cover" />
-            <img src={logoT2.url} alt="ALFA BLUE" aria-hidden tabIndex={-1} className="absolute -bottom-5 -left-5 hidden h-24 w-24 md:block" />
+            <img src="/images/alfa-blue-logo-t2.png" alt="ALFA BLUE" aria-hidden tabIndex={-1} className="absolute -bottom-5 -left-5 hidden h-24 w-24 md:block" />
           </div>
         </div>
       </section>
@@ -75,7 +73,7 @@ function Index() {
           </div>
           <figure>
             <img
-              src={dreams.url}
+              src="/images/teens-dreaming-of-a-greener-future.jpg"
               alt="Illustration of five hopeful teenagers looking up at a green, solar-powered city, with the words: The future belongs to those who believe in the beauty of their dreams."
               width={1672}
               height={941}
