@@ -13,7 +13,7 @@ jobs:
       - run: bun install
       - run: cp .github/static/vite.config.ts vite.config.ts
       - run: bun run build
-      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
