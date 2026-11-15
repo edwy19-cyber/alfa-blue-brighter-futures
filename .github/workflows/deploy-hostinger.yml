@@ -30,4 +30,5 @@ jobs:
           protocol: ftps
           local-dir: ./.output/public/
           server-dir: ./public_html/
-          dangerous-clean-slate: true
+          state-name: .ftp-deploy-sync-state-v2.json
+          log-level: verbose
