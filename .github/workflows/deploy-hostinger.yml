@@ -1,18 +1,27 @@
 name: Deploy to Hostinger
+
 on:
   workflow_dispatch:
+
 concurrency:
   group: deploy-hostinger
   cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v5
+
       - uses: oven-sh/setup-bun@v2
+
       - run: bun install
+
       - run: cp .github/static/vite.config.ts vite.config.ts
+
       - run: bun run build
+
       - uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -21,3 +30,4 @@ jobs:
           protocol: ftps
           local-dir: ./.output/public/
           server-dir: ./public_html/
+          dangerous-clean-slate: true
