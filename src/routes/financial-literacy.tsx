@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Fragment } from "react";
 import literacyStudents from "@/assets/financial-literacy-students.jpg";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/Blocks";
 import { pageHead } from "@/content/site";
@@ -193,19 +194,23 @@ function Page() {
             ))}
           </div>
           <h3 className="mt-16 text-2xl md:text-3xl">What the research shows</h3>
-          <div className="mt-8 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-6">
+          <div className="mt-8 grid gap-px bg-border md:grid-cols-2">
             {research.map((r, i) => (
-              <div key={r.title} className={`flex flex-col bg-card p-8 lg:col-span-2${i === 3 ? " lg:col-start-2" : ""}${i === research.length - 1 ? " md:col-span-2 lg:col-span-2" : ""}`}>
+              <Fragment key={r.title}>
+              <div className={`flex flex-col bg-card p-8${i === research.length - 1 ? " md:col-span-2" : ""}`}>
                 <h4 className="text-lg">{r.title}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{r.text}</p>
                 <a href={r.href} target="_blank" rel="noopener noreferrer" className="mt-auto pt-5 text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline">
                   {r.source}
                 </a>
               </div>
+              {i === 2 && (
+                <div className="relative min-h-64 bg-card md:min-h-0">
+                  <img src="/images/alfa-blue-header-logo.png" alt="ALFA BLUE logo" loading="lazy" width={1130} height={1392} className="absolute inset-0 h-full w-full object-contain p-8" />
+                </div>
+              )}
+              </Fragment>
             ))}
-            <div className="relative md:col-span-2 lg:col-span-2 lg:col-start-5">
-              <img src="/images/alfa-blue-header-logo.png" alt="ALFA BLUE logo" loading="lazy" width={1130} height={1392} className="h-64 w-full object-contain p-8 md:h-64 lg:absolute lg:inset-0 lg:h-full" />
-            </div>
           </div>
           <p className="mt-10 max-w-3xl border-l-2 border-brand pl-6 text-lg font-medium">
             When young people learn to save, plan and invest wisely, they make fewer costly financial mistakes, build more secure futures and contribute to more stable, resilient economies.
