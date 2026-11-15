@@ -108,7 +108,7 @@ function Page() {
                 <Field id="organisation" label="Organisation *"><Input id="organisation" name="organisation" required autoComplete="organization" /></Field>
                 <Field id="role" label="Role"><Input id="role" name="role" autoComplete="organization-title" /></Field>
               </div>
-              <Field id="message" label={`Message — ${type} *`}><Textarea id="message" name="message" rows={6} required /></Field>
+              <Field id="message" label={`Message, ${type} *`}><Textarea id="message" name="message" rows={6} required /></Field>
               {/* Honeypot for spam bots */}
               <div className="absolute -left-[9999px]" aria-hidden>
                 <label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label>

@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ALFA BLUE — Digital and Financial Literacy Partnerships" },
+      { title: "ALFA BLUE, Digital and Financial Literacy Partnerships" },
       { name: "description", content: "ALFA BLUE develops education partnerships in AI, coding and financial literacy." },
       { name: "author", content: "ALFA BLUE Management Consulting" },
       { property: "og:type", content: "website" },

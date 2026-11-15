@@ -14,7 +14,7 @@ export const Route = createFileRoute("/ai-coding-literacy")({
 const skills = [
   { title: "AI literacy", text: "Understanding what AI systems do, where they fall short, and how to use them responsibly and critically." },
   { title: "Computer coding", text: "Learning to build working programs, from visual block coding through to text-based languages." },
-  { title: "Computational thinking", text: "Breaking problems into steps, recognising patterns and reasoning logically — skills that transfer across subjects." },
+  { title: "Computational thinking", text: "Breaking problems into steps, recognising patterns and reasoning logically, skills that transfer across subjects." },
   { title: "Creativity", text: "Designing games, animations and digital projects that turn students from consumers into makers." },
   { title: "Digital citizenship", text: "Safe, ethical and informed participation online, including privacy and wellbeing." },
   { title: "Future readiness", text: "Foundations that open doors to further study and careers in an increasingly digital economy." },
@@ -59,7 +59,7 @@ function Page() {
     <>
       <PageHero eyebrow="Initiative 01" title="AI, computer coding and digital literacy for every student" intro="Digital skills increasingly shape access to opportunity. We help make high-quality learning available to students who would otherwise be left out." />
 
-      <section className="section">
+      <section className="section pb-10 md:pb-14">
         <div className="container-x">
           <SectionHead eyebrow="Why it matters" title="More than learning to code" intro="Young people are growing up alongside AI. They need to understand it, question it and create with it." />
 
@@ -107,7 +107,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section pt-10 md:pt-14">
         <div className="container-x">
           <SectionHead eyebrow="Implementation" title="How a programme can be delivered" />
           <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">

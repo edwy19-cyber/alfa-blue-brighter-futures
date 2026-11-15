@@ -174,12 +174,12 @@ function Page() {
         </div>
       </section>
 
-      <section className="section border-t border-border">
+      <section className="section border-t border-border pb-10 md:pb-14">
         <div className="container-x">
           <SectionHead
             eyebrow="Why it matters"
             title="Early financial literacy builds stable lives and stronger economies"
-            intro="Most people make their biggest financial decisions — saving, borrowing, investing and planning for retirement — without ever having been taught how. Research shows that financial knowledge gained early pays off over a lifetime."
+            intro="Most people make their biggest financial decisions, saving, borrowing, investing and planning for retirement, without ever having been taught how. Research shows that financial knowledge gained early pays off over a lifetime."
           />
           <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
             {gapStats.map((s) => (
@@ -203,6 +203,9 @@ function Page() {
                 </a>
               </div>
             ))}
+            <div className="relative md:col-span-2 lg:col-span-2 lg:col-start-5">
+              <img src="/images/alfa-blue-header-logo.png" alt="ALFA BLUE logo" loading="lazy" width={1130} height={1392} className="h-64 w-full object-contain p-8 md:h-64 lg:absolute lg:inset-0 lg:h-full" />
+            </div>
           </div>
           <p className="mt-10 max-w-3xl border-l-2 border-brand pl-6 text-lg font-medium">
             When young people learn to save, plan and invest wisely, they make fewer costly financial mistakes, build more secure futures and contribute to more stable, resilient economies.
@@ -210,7 +213,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="section border-t border-border">
+      <section className="section border-t border-border pt-10 md:pt-14">
         <div className="container-x">
           <SectionHead
             eyebrow="From literacy to inclusion"
@@ -301,7 +304,7 @@ function Page() {
           <div className="max-w-3xl border border-border bg-card p-8 md:p-10">
             <h3 className="text-2xl md:text-3xl">A state-of-the-art programme for every stage of K-12</h3>
             <p className="mt-4 text-muted-foreground">
-              ALFA BLUE is developing a state-of-the-art financial literacy programme that grows with each student from the early primary years to the end of secondary school. It is designed for every student, whatever career path they later choose — because everyone will earn, spend, save, borrow and plan for the future. Each stage builds on the last, using age-appropriate, hands-on and game-based learning adapted to the local country and currency.
+              ALFA BLUE is developing a state-of-the-art financial literacy programme that grows with each student from the early primary years to the end of secondary school. It is designed for every student, whatever career path they later choose, because everyone will earn, spend, save, borrow and plan for the future. Each stage builds on the last, using age-appropriate, hands-on and game-based learning adapted to the local country and currency.
             </p>
           </div>
           <div className="mt-14">

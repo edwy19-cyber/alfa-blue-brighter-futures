@@ -1,5 +1,7 @@
 # Requested website changes
 
+- [x] Requested logo placements, site-wide em-dash replacements, and two section-spacing reductions (no browser checks).
+
 - [x] Replace shared header logo, preserving proportions and accessible home link.
 - [x] Replace footer logo on the existing light panel, preserving proportions and accessible home link.
 - [x] Replace footer domain text with the requested email link; preserve company details.

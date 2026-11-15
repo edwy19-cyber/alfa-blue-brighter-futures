@@ -7,7 +7,7 @@ export const Route = createFileRoute("/partnerships")({
   head: () =>
     pageHead(
       "Partnerships & Impact",
-      "How ALFA BLUE proposes to work with NGOs, foundations, sponsors and schools — from needs assessment to programme delivery and partner reporting.", "/partnerships"
+      "How ALFA BLUE proposes to work with NGOs, foundations, sponsors and schools, from needs assessment to programme delivery and partner reporting.", "/partnerships"
     ),
   component: Page,
 });

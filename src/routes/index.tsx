@@ -50,7 +50,7 @@ function Index() {
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/75">
               We bring together curriculum providers, NGOs, schools and funders to widen access to the skills
-              every student needs — with a particular focus on underserved communities.
+              every student needs, with a particular focus on underserved communities.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="brand"><a href="#initiatives">Explore Our Initiatives</a></Button>
@@ -80,7 +80,7 @@ function Index() {
               loading="lazy"
               className="h-auto w-full object-cover"
             />
-            <figcaption className="mt-4 text-sm text-muted-foreground">— Eleanor Roosevelt</figcaption>
+            <figcaption className="mt-4 text-sm text-muted-foreground">attributed to "Eleanor Roosevelt"</figcaption>
           </figure>
         </div>
       </section>
@@ -90,7 +90,7 @@ function Index() {
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
           <div className="mt-14 space-y-16">
             {[
-              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool — an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
+              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool, an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
               { img: finance, to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
             ].map((p, i) => (
               <article key={p.to} className="group grid items-center gap-10 md:grid-cols-2">
@@ -118,7 +118,16 @@ function Index() {
           <ul className="divide-y divide-border border-y border-border">
             {delivery.map((d) => (
               <li key={d.who} className="grid gap-2 py-6 sm:grid-cols-[12rem_1fr]">
-                <span className="font-display text-xl">{d.who}</span>
+                <span className="font-display text-xl">
+                  {d.who === "Curriculum providers" ? (
+                    <>
+                      <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="mb-3 h-auto w-[120px] object-contain" />
+                      {d.who}
+                    </>
+                  ) : d.who === "ALFA BLUE" ? (
+                    <img src="/images/alfa-blue-h-logo.png" alt="ALFA BLUE Management Consulting" width={1920} height={641} className="h-auto w-[170px] object-contain" />
+                  ) : d.who}
+                </span>
                 <span className="text-muted-foreground">{d.what}</span>
               </li>
             ))}
