@@ -1,14 +1,20 @@
-name: Deploy to Hostinger
+name: Build website for Hostinger
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: deploy-hostinger
+  group: build-hostinger
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,19 +22,30 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
 
-      - run: bun install
+      - name: Install dependencies
+        run: bun install
 
-      - run: cp .github/static/vite.config.ts vite.config.ts
+      - name: Configure static build
+        run: cp .github/static/vite.config.ts vite.config.ts
 
-      - run: bun run build
+      - name: Build website
+        run: bun run build
 
-      - uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      - name: Add Hostinger configuration
+        run: |
+          cat > .output/public/.htaccess <<'EOF'
+          Options -MultiViews
+          DirectorySlash On
+          DirectoryIndex index.html
+
+          RedirectMatch 301 ^/impact/?$ /approach
+          RedirectMatch 301 ^/sponsor/?$ /how-sponsorship-works
+          EOF
+
+      - name: Publish built website to Hostinger branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./.output/public/
-          server-dir: ./public_html/
-          state-name: .ftp-deploy-sync-state-v2.json
-          log-level: verbose
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: hostinger
+          publish_dir: ./.output/public
+          force_orphan: true
