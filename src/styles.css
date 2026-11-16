@@ -145,8 +145,8 @@
   .fade-up { animation: fade-up .8s cubic-bezier(.2,.7,.2,1) both; }
 }
 /* Override only the page-hero H1 size, retaining each title's existing line-height. */
-.bg-deep h1 { font-size: calc(2.25rem - 2pt); }
+.bg-deep h1 { font-size: calc(2.25rem - 4pt); }
 @media (min-width: 768px) {
-  .bg-deep h1 { font-size: calc(3.75rem - 2pt); }
+  .bg-deep h1 { font-size: calc(3.75rem - 4pt); }
 }
 @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
