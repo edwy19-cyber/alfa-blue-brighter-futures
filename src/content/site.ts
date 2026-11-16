@@ -13,6 +13,7 @@ export const SITE_URL = "https://alfablueme.com";
 
 export const LEGAL_NAME = "ALFA BLUE Management Consulting LLC";
 export const REGISTERED_ADDRESS = ["16192 Coastal Highway", "Lewes, Delaware 19958", "County of Sussex, USA"] as const;
+export const EGYPT_OFFICE_ADDRESS = ["46 A.R. Sanhoury Street", "Nasr City", "Cairo | Egypt."] as const;
 
 const SHARE_ORIGIN = "https://alfablueme.com";
 const SHARE_IMAGE = `${SHARE_ORIGIN}/og-share-v3.png`;

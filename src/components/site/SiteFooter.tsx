@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { openCookieSettings } from "@/components/site/CookieBanner";
-import { LEGAL_NAME, NAV, REGISTERED_ADDRESS } from "@/content/site";
+import { EGYPT_OFFICE_ADDRESS, LEGAL_NAME, NAV, REGISTERED_ADDRESS } from "@/content/site";
 
 export function SiteFooter() {
   return (
     <footer className="bg-deep">
-      <div className="container-x grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="container-x grid gap-10 py-16 md:grid-cols-2 md:gap-x-8 lg:grid-cols-[24rem_minmax(0,0.9fr)_minmax(0,1.9fr)] lg:gap-x-10">
         <div>
           <Link to="/" aria-label="ALFA BLUE – Home" className="inline-block max-w-full bg-background p-4">
             <img src="/images/alfa-blue-h-logo.png" alt="" className="h-auto w-full max-w-[240px]" width={1920} height={641} />
@@ -31,13 +31,23 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
-        <div className="text-sm text-primary-foreground/70">
+        <div className="text-sm text-primary-foreground/70 md:col-span-2 lg:col-span-1">
           <p className="eyebrow">Company</p>
           <p className="mt-4 font-semibold text-primary-foreground/90">{LEGAL_NAME}</p>
-          <p className="mt-2 text-xs uppercase tracking-wider">Registered address</p>
-          <address className="not-italic">
-            {REGISTERED_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
-          </address>
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-x-10">
+            <div>
+              <p className="mt-2 text-xs uppercase tracking-wider">Registered address</p>
+              <address className="not-italic">
+                {REGISTERED_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
+              </address>
+            </div>
+            <div>
+              <p className="mt-2 text-xs uppercase tracking-wider">Egypt office</p>
+              <address className="not-italic">
+                {EGYPT_OFFICE_ADDRESS.map((l) => <span key={l} className="block">{l}</span>)}
+              </address>
+            </div>
+          </div>
           <p className="mt-3"><a href="mailto:ReachUs@alfablueme.com" className="text-primary-foreground/80 hover:text-primary-foreground">ReachUs@alfablueme.com</a></p>
         </div>
       </div>
