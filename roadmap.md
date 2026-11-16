@@ -1,5 +1,8 @@
 # Requested website changes
 
+- [x] Increase shared eyebrow sizes by 1pt at every width without changing other styling.
+- [x] Reduce all ten main page H1 sizes by 2pt at every width; no browser checks or screenshots.
+
 - [x] Add the Bett Awards 2023 Finalist badge beside the EAF badge on Digital Literacy.
 - [x] Link the Home Delivery model Logiscool logo to the Logiscool website.
 
