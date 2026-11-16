@@ -121,7 +121,9 @@ function Index() {
                 <span className="font-display text-xl">
                   {d.who === "Curriculum providers" ? (
                     <>
-                      <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="mb-3 h-auto w-[120px] object-contain" />
+                      <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" aria-label="Logiscool website" className="mb-3 inline-block">
+                        <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="h-auto w-[120px] object-contain" />
+                      </a>
                       {d.who}
                     </>
                   ) : d.who === "ALFA BLUE" ? (

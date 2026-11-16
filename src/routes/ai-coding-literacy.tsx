@@ -99,7 +99,10 @@ function Page() {
                 <p>Along the way, a revolutionary AI assistant supports each student like a personal teacher.</p>
                 <p>Teachers and school leaders can follow every student's progress in real time and in detail.</p>
               </div>
-              <img src="/images/eaf-certified-pedagogical-quality.png" alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={640} height={661} className="mt-8 h-auto w-[130px] md:w-[160px]" />
+              <div className="mt-8 flex flex-wrap items-start gap-4">
+                <img src="/images/eaf-certified-pedagogical-quality.png" alt="Education Alliance Finland – Certified Pedagogical Quality" loading="lazy" width={640} height={661} className="h-[130px] w-auto md:h-[160px]" />
+                <img src="/images/bett-awards-2023-finalist.png" alt="Bett Awards 2023 Finalist" loading="lazy" width={228} height={228} className="h-[130px] w-auto md:h-[160px]" />
+              </div>
             </div>
             <img src="/images/students-robotics-project.jpg" alt="Four teenagers assembling and programming a small robot in a classroom" loading="lazy" width={1000} height={760} className="aspect-[4/3] w-full rounded-sm object-cover" />
           </div>

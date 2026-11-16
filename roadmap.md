@@ -1,5 +1,8 @@
 # Requested website changes
 
+- [x] Add the Bett Awards 2023 Finalist badge beside the EAF badge on Digital Literacy.
+- [x] Link the Home Delivery model Logiscool logo to the Logiscool website.
+
 - [x] Requested logo placements, site-wide em-dash replacements, and two section-spacing reductions (no browser checks).
 
 - [x] Replace shared header logo, preserving proportions and accessible home link.
