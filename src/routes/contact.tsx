@@ -7,8 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { PageHero } from "@/components/site/Blocks";
 import { LEGAL_NAME, pageHead, REGISTERED_ADDRESS } from "@/content/site";
-import { ENQUIRY_TYPES, enquirySchema } from "@/lib/enquiry";
-import { submitEnquiry } from "@/lib/enquiry.functions";
+import { ENQUIRY_TYPES, enquirySchema, sendEnquiry } from "@/lib/enquiry";
 
 export const Route = createFileRoute("/contact")({
   head: () =>
@@ -56,10 +55,10 @@ function Page() {
     }
     setSending(true);
     try {
-      await submitEnquiry({ data: parsed.data });
+      await sendEnquiry(parsed.data);
       setSent(true);
     } catch {
-      toast.error("Something went wrong. Please try again.");
+      toast.error("Sorry, your enquiry could not be sent. Please email ReachUs@alfablueme.com.");
     } finally {
       setSending(false);
     }
