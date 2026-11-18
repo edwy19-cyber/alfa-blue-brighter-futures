@@ -21,8 +21,11 @@ export const Route = createFileRoute("/")({
       "og:description": socialDescription,
       "twitter:description": socialDescription,
     };
+    const seoTitle = "ALFA BLUE | Digital & Financial Literacy Experts";
+    const seoDescription = "ALFA BLUE develops international partnerships to expand AI, coding, digital and financial literacy education for K–12 students.";
     return {
-      meta: head.meta.map((m) => {
+      links: [{ rel: "canonical", href: "https://alfablueme.com/" }],
+      meta: head.meta.map((m) => ("title" in m ? { title: seoTitle } : "name" in m && m.name === "description" ? { ...m, content: seoDescription } : m)).map((m) => {
         const key = ("property" in m ? m.property : "name" in m ? m.name : undefined) as string | undefined;
         return key && key in overrides ? { ...m, content: overrides[key] } : m;
       }),
@@ -59,7 +62,7 @@ function Index() {
           </div>
           <div className="relative">
             <img src={hero} alt="Students working on laptops with their teacher in a classroom" width={1600} height={1008} className="aspect-[4/3] w-full object-cover" />
-            <img src="/images/alfa-blue-logo-t2.png" alt="ALFA BLUE" aria-hidden tabIndex={-1} className="absolute -bottom-5 -left-5 hidden h-24 w-24 md:block" />
+            <img src="/images/alfa-blue-logo-t2.png" alt="" aria-hidden tabIndex={-1} className="absolute -bottom-5 -left-5 hidden h-24 w-24 md:block" />
           </div>
         </div>
       </section>
@@ -90,8 +93,8 @@ function Index() {
           <SectionHead eyebrow="Two initiatives" title="Essential skills for the 21st century" />
           <div className="mt-14 space-y-16">
             {[
-              { img: coding, to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool, an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
-              { img: finance, to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
+              { img: coding, alt: "Students learning to code on laptops in a classroom", to: "/ai-coding-literacy" as const, tag: "Partnership model", title: "AI, Computer Coding & Digital Literacy", text: "Facilitating international partnerships that bring high-quality AI, coding and digital literacy education to school-age students, working with international curriculum providers.", note: "In partnership with Logiscool, an international coding and digital-literacy school network whose curriculum and learning platform are certified for pedagogical quality by Education Alliance Finland." },
+              { img: finance, alt: "Students in a financial literacy lesson", to: "/financial-literacy" as const, tag: "ALFA BLUE initiative", title: "Financial Literacy for Life", text: "An ALFA BLUE educational initiative introducing age-appropriate money management, saving, budgeting, investing fundamentals and long-term planning to school students." },
             ].map((p, i) => (
               <article key={p.to} className="group grid items-center gap-10 md:grid-cols-2">
                 <div className={i % 2 === 0 ? "md:order-2" : ""}>
@@ -104,7 +107,7 @@ function Index() {
                   </Link>
                 </div>
                 <div className={`overflow-hidden ${i % 2 === 0 ? "md:order-1" : ""}`}>
-                  <img src={p.img} alt="" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                  <img src={p.img} alt={p.alt} loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                 </div>
               </article>
             ))}

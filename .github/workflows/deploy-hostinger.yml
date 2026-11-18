@@ -38,6 +38,10 @@ jobs:
           DirectorySlash On
           DirectoryIndex index.html
 
+          RewriteEngine On
+          RewriteCond %{HTTP_HOST} ^www\.alfablueme\.com$ [NC]
+          RewriteRule ^(.*)$ https://alfablueme.com/$1 [R=301,L]
+
           RedirectMatch 301 ^/impact/?$ /approach
           RedirectMatch 301 ^/sponsor/?$ /how-sponsorship-works
           EOF
