@@ -123,12 +123,12 @@ function Index() {
               <li key={d.who} className="grid gap-2 py-6 sm:grid-cols-[12rem_1fr]">
                 <span className="font-display text-xl">
                   {d.who === "Curriculum providers" ? (
-                    <>
-                      <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" aria-label="Logiscool website" className="mb-3 inline-block">
+                    <span className="flex flex-col items-start gap-2">
+                      <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" aria-label="Logiscool website" className="block">
                         <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="h-auto w-[120px] object-contain" />
                       </a>
-                      {d.who}
-                    </>
+                      <span className="block text-left">{d.who}</span>
+                    </span>
                   ) : d.who === "ALFA BLUE" ? (
                     <img src="/images/alfa-blue-h-logo.png" alt="ALFA BLUE Management Consulting" width={1920} height={641} className="h-auto w-[170px] object-contain" />
                   ) : d.who}
