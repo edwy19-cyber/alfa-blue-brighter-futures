@@ -30,7 +30,7 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Site copy and nav live in `src/content/site.ts` (with `pageHead()` per route) so future Arabic/French versions can mirror one structure.
-- Enquiry validation lives in `src/lib/enquiry.ts` (shared by client and server function); delivery is not yet wired to email/storage.
+- Enquiry validation and delivery live in `src/lib/enquiry.ts`; enquiries post from the browser to Formspree because the Hostinger build is static with no server.
 - Shared header and footer logos use user-requested static paths under `public/images`; retain original bytes and proportions to preserve the supplied artwork.
 - Uploaded policy downloads use Lovable Assets pointers to preserve supplied PDF bytes without adding binaries to the repository.
 - Site images and downloads live as real files under `public/images` and `public/docs`, never as hosted `.asset.json` pointers, so external builds (GitHub/Hostinger) contain every file.
