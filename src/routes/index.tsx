@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const delivery = [
-  { who: "Curriculum providers", what: "Supply specialist content and platforms under their own licensing terms." },
+  { who: "Curriculum providers", what: "Curriculum providers of Coding and AI education, with revolutionary AI-support." },
   { who: "ALFA BLUE", what: "Develops programmes, coordinates partners and facilitates market access." },
   { who: "NGOs & schools", what: "Reach students and deliver locally with authorised educators." },
   { who: "Funders & sponsors", what: "Support programmes by funding NGO delivery partners directly, through CSR and philanthropy." },
@@ -123,12 +123,9 @@ function Index() {
               <li key={d.who} className="grid gap-2 py-6 sm:grid-cols-[12rem_1fr]">
                 <span className="font-display text-xl">
                   {d.who === "Curriculum providers" ? (
-                    <span className="flex flex-col items-start gap-2">
-                      <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" aria-label="Logiscool website" className="block">
-                        <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="h-auto w-[120px] object-contain" />
-                      </a>
-                      <span className="block text-left">{d.who}</span>
-                    </span>
+                    <a href="https://www.logiscool.com" target="_blank" rel="noopener noreferrer" aria-label="Logiscool website" className="block">
+                      <img src="/images/logiscool-logo.png" alt="Logiscool" width={1024} height={306} className="h-auto w-[120px] object-contain" />
+                    </a>
                   ) : d.who === "ALFA BLUE" ? (
                     <img src="/images/alfa-blue-h-logo.png" alt="ALFA BLUE Management Consulting" width={1920} height={641} className="h-auto w-[170px] object-contain" />
                   ) : d.who}
